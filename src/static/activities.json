@@ -3673,5 +3673,35 @@
 "average_speed": 2.655,
 "source": "strava",
 "streak": 7
+},
+{
+"run_id": 10991786328,
+"name": "\u9a91\u884c\u901a\u52e4",
+"distance": 3632.7,
+"moving_time": "0:17:24",
+"type": "Ride",
+"start_date": "2024-03-19 10:22:20+00:00",
+"start_date_local": "2024-03-19 18:22:20",
+"location_country": "\u4e2d\u822a\u8def, \u534e\u822a\u793e\u533a, \u534e\u5f3a\u5317\u8857\u9053, \u798f\u7530\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "g_rhCyihwTAOGWIy@Mi@Ga@F{@Tm@GUDYWyABa@?a@HWDi@@{BIk@Fo@@aAEw@Ka@AU?q@HaAMiANeAEiA?q@GkA@yAAIGIEe@HaAGeBHaCGoA@sAEiAEQOMk@Mq@FsBDo@Ck@Bc@CIEIKKc@@KFCtAKnCLt@?n@ELELILUBQ@gEEqAJi@@UEu@K}@?mAGy@Bs@H_@@[COc@oAEWAQFyARaBB]A]OgAAc@@gAFw@Bi@AqBCQKUOIWIQA_GJ}BA{DBk@COCSWGe@GUEiBFkAOqAEOmB_Cs@kA_@Mm@k@u@y@U_@EOUMKU?}@",
+"average_heartrate": 113.8,
+"average_speed": 3.48,
+"source": "strava",
+"streak": 8
+},
+{
+"run_id": 10992229404,
+"name": "Nike Run Club: \u661f\u671f\u4e8c \u665a\u95f4\u8dd1",
+"distance": 10248.2,
+"moving_time": "1:00:00",
+"type": "Run",
+"start_date": "2024-03-19 11:02:51+00:00",
+"start_date_local": "2024-03-19 19:02:51",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 151.8,
+"average_speed": 2.847,
+"source": "strava",
+"streak": 8
 }
 ]
