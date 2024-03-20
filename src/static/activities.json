@@ -3718,5 +3718,35 @@
 "average_speed": 3.926,
 "source": "strava",
 "streak": 9
+},
+{
+"run_id": 11000394933,
+"name": "\u9a91\u884c\u901a\u52e4",
+"distance": 3890.1,
+"moving_time": "0:17:50",
+"type": "Ride",
+"start_date": "2024-03-20 10:12:49+00:00",
+"start_date_local": "2024-03-20 18:12:49",
+"location_country": "\u4e2d\u822a\u8def, \u534e\u822a\u793e\u533a, \u534e\u5f3a\u5317\u8857\u9053, \u798f\u7530\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "a_rhCmihwTCEC}@WwAA[?]J_AAa@Hm@EOMWESLaBCs@Em@Be@?{@Fw@DY@_@QoA@qBD]EuA@[Fc@Ky@Ao@NoAXeABSAQQSSGUDLOBMMo@B_A?{ADu@GaBA{@D{AEo@EQGG[AgDNkCEQEKI[o@OGaAHqAAoBFs@A}ABeCGq@Bq@A_@BiAAaADcFAwBIQEKMAaAGeAMuEAiDIcFDmHCaICwCBeAMy@MYWqACk@?oAq@oDa@_AyAqCUm@Kc@GgADyAFWAk@FINCNBXH",
+"average_heartrate": 109.6,
+"average_speed": 3.636,
+"source": "strava",
+"streak": 9
+},
+{
+"run_id": 11000387345,
+"name": "Nike Run Club: \u661f\u671f\u4e09 \u665a\u95f4\u8dd1",
+"distance": 7218.2,
+"moving_time": "0:42:00",
+"type": "Run",
+"start_date": "2024-03-20 12:58:36+00:00",
+"start_date_local": "2024-03-20 20:58:36",
+"location_country": "\u5b9d\u5b89\u5357\u8def, \u7ea2\u6751\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "}vrhCsimwTT?h@INMLS?UAo@WwAC[YqAYw@KQ?SEUDWQGQMWCOOu@a@_@YOIOO_@SkA[eAm@_@e@GWOMMOBSOI{ALe@Hg@BQDUAg@DSFm@Di@HWBQAg@He@?SD{@Dk@Fe@AuAHS?WBcBD}@AU@k@AU@gBIw@MU@qAQiBKSCS@WAe@QQOOGOMg@SQQQGW?QQEQ`AuAJRLPn@f@Z\\?WSCQQcAy@OJk@lAHTVBd@RtA~@d@RjBPh@BRAj@FNDhDPRFTC|BBvAAd@Eh@@PCjFUREd@CjAO|D[T@PGP@z@Of@ELLV~@LP^\\TJJLPHLNx@Vd@Rd@Jj@RPLNPp@^t@AHPR@RGNFVBTCz@HTANIh@@bBb@RBTRJVTDXONMx@Jj@BhAPRAz@PbBTrBIR@}@ESDg@I}@AoAOg@K}@EoCo@SDEZOPSASFMQYi@qAOWBSCy@Ok@?QBi@AQEOc@FNuAQLXa@[SCs@a@m@k@_Bm@UEQKOMc@Oo@eAG[?SU?OD{BPg@JgDNmCTSDSAQBoABUD{@BSDKRSIW@SC}D?sAK{BEwBQsAC{@SOMa@WQCq@g@SCW@QEMMRc@Xa@Re@j@h@bAr@GSSGc@USM[]SJ]|@MPDTf@BHRNJt@\\r@d@d@JbBLR?PMRJR?b@HjE^~@@fDCRDRGf@D|@C~@K|@EjC]xBQfBWn@ER@v@Mj@CPBCTLP^t@",
+"average_heartrate": 153.7,
+"average_speed": 2.864,
+"source": "strava",
+"streak": 9
 }
 ]
