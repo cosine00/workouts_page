@@ -3855,6 +3855,21 @@
 "streak": 13
 },
 {
+"run_id": 11033740600,
+"name": "YaoYao\u8df3\u7ef3",
+"distance": 4320.0,
+"moving_time": "0:35:35",
+"type": "Ropejump",
+"start_date": "2024-03-24 22:30:00+00:00",
+"start_date_local": "2024-03-25 06:30:00",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 2.023,
+"source": "strava",
+"streak": 14
+},
+{
 "run_id": 11033664554,
 "name": "YaoYao\u8df3\u7ef3\u6d4b\u8bd5\u624b\u673a\u7aef",
 "distance": 4300.0,
