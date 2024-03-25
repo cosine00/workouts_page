@@ -12,7 +12,7 @@ import {
   VIRTUAL_RIDE_COLOR,
   HIKE_COLOR,
   SWIM_COLOR,
-  ROWING_COLOR,
+  Jumprope_COLOR,
   ROAD_TRIP_COLOR,
   FLIGHT_COLOR,
   RUN_COLOR,
@@ -212,8 +212,8 @@ const titleForType = (type: string): string => {
       return RUN_TITLES.VIRTUAL_RIDE_TITLE;
     case 'Hike':
       return RUN_TITLES.HIKE_TITLE;
-    case 'Rowing':
-      return RUN_TITLES.ROWING_TITLE;
+    case 'Jumprope':
+      return RUN_TITLES.JUMPROPE_TITLE;
     case 'Swim':
       return RUN_TITLES.SWIM_TITLE;
     case 'RoadTrip':
@@ -259,8 +259,8 @@ const typeForRun = (run: Activity): string => {
       return 'Virtual Ride';
     case 'Hike':
       return 'Hike';
-    case 'Rowing':
-      return 'Rowing';
+    case 'Jumprope':
+      return 'Jumprope';
     case 'Swim':
       return 'Swim';
     case 'RoadTrip':
@@ -305,8 +305,8 @@ const colorFromType = (workoutType: string): string => {
       return VIRTUAL_RIDE_COLOR;
     case 'Hike':
       return HIKE_COLOR;
-    case 'Rowing':
-      return ROWING_COLOR;
+    case 'Jumprope':
+      return Jumprope_COLOR;
     case 'Swim':
       return SWIM_COLOR;
     case 'RoadTrip':
