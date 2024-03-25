@@ -3841,7 +3841,7 @@
 },
 {
 "run_id": 11033328829,
-"name": "YaoYao \u8df3\u7ef3 5559",
+"name": "YaoYao\u8df3\u7ef3",
 "distance": 5559.0,
 "moving_time": "0:45:25",
 "type": "Ropejump",
@@ -3849,9 +3849,39 @@
 "start_date_local": "2024-03-24 18:54:00",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": 153.0,
+"average_heartrate": null,
 "average_speed": 2.04,
 "source": "strava",
 "streak": 13
+},
+{
+"run_id": 11033664554,
+"name": "YaoYao\u8df3\u7ef3\u6d4b\u8bd5\u624b\u673a\u7aef",
+"distance": 4300.0,
+"moving_time": "0:35:00",
+"type": "Ropejump",
+"start_date": "2024-03-25 08:40:56+00:00",
+"start_date_local": "2024-03-25 16:40:56",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 2.048,
+"source": "strava",
+"streak": 14
+},
+{
+"run_id": 11033659019,
+"name": "YaoYao\u8df3\u7ef3\u6d4b\u8bd5pc",
+"distance": 4320.0,
+"moving_time": "0:35:40",
+"type": "Ropejump",
+"start_date": "2024-03-25 10:00:00+00:00",
+"start_date_local": "2024-03-25 18:00:00",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 2.019,
+"source": "strava",
+"streak": 14
 }
 ]
