@@ -18,6 +18,7 @@ import {
   RUN_COLOR,
   KAYAKING_COLOR,
   SNOWBOARD_COLOR,
+  Ropejump_COLOR,
   TRAIL_RUN_COLOR,
 } from './const';
 import { FeatureCollection, LineString } from 'geojson';
