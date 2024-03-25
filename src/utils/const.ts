@@ -114,7 +114,7 @@ export {
 const nike = 'rgb(224,237,94)';
 const yellow = 'rgb(224,237,94)';
 const green = '#A1E154';
-const pink = 'rgb(237,85,219)';
+const pink = '#E91E63';
 const orange = '#F57C00';
 const cyan = 'rgb(112,243,255)';
 const IKB = 'rgb(0,47,167)';
@@ -131,7 +131,7 @@ export const MAIN_COLOR = green;
 export const RUN_COLOR = orange;
 export const RIDE_COLOR = green;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
-export const HIKE_COLOR = wpink;
+export const HIKE_COLOR = pink;
 export const SWIM_COLOR = gold;
 export const ROWING_COLOR = cyan;
 export const ROAD_TRIP_COLOR = purple;
