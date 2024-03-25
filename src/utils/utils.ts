@@ -224,8 +224,8 @@ const titleForType = (type: string): string => {
       return RUN_TITLES.KAYAKING_TITLE;
     case 'Snowboard':
       return RUN_TITLES.SNOWBOARD_TITLE;
-    case 'Ski':
-      return RUN_TITLES.SKI_TITLE;
+    case 'Ropejump':
+      return RUN_TITLES.Ropejump_TITLE;
     default:
       return RUN_TITLES.RUN_TITLE;
   }
@@ -271,8 +271,8 @@ const typeForRun = (run: Activity): string => {
       return 'Kayaking';
     case 'Snowboard':
       return 'Snowboard';
-    case 'Ski':
-      return 'Ski';
+    case 'Ropejump':
+      return 'Ropejump';
     default:
       return 'Run';
   }
@@ -316,8 +316,8 @@ const colorFromType = (workoutType: string): string => {
     case 'Kayaking':
       return KAYAKING_COLOR;
     case 'Snowboard':
-    case 'Ski':
-      return SNOWBOARD_COLOR;
+    case 'Ropejump':
+      return Ropejump_COLOR;
     default:
       return MAIN_COLOR;
   }
