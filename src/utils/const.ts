@@ -117,7 +117,7 @@ const green = '#A1E154';
 const pink = '#E91E63';
 const orange = '#F57C00';
 const cyan = 'rgb(112,243,255)';
-const IKB = 'rgb(0,47,167)';
+const IKB = '#A1E0F7';
 const wpink = 'rgb(228,212,220)';
 const gold = 'rgb(242,190,69)';
 const purple = 'rgb(154,118,252)';
@@ -128,7 +128,7 @@ const red = 'rgb(255,0,0)';//大红色
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
 export const MAIN_COLOR = green;
-export const RUN_COLOR = nike;
+export const RUN_COLOR = IKB;
 export const RIDE_COLOR = green;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
 export const HIKE_COLOR = pink;
