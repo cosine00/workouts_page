@@ -3834,7 +3834,7 @@
 "start_date_local": "2024-03-24 06:54:00",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": null,
+"average_heartrate": 153.0,
 "average_speed": 2.04,
 "source": "strava",
 "streak": 13
@@ -3864,7 +3864,7 @@
 "start_date_local": "2024-03-25 06:30:00",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": null,
+"average_heartrate": 153.0,
 "average_speed": 2.023,
 "source": "strava",
 "streak": 14

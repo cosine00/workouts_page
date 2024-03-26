@@ -128,7 +128,7 @@ const red = 'rgb(255,0,0)';//大红色
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
 export const MAIN_COLOR = green;
-export const RUN_COLOR = orange;
+export const RUN_COLOR = nike;
 export const RIDE_COLOR = green;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
 export const HIKE_COLOR = pink;
@@ -140,5 +140,5 @@ export const PROVINCE_FILL_COLOR = '#47b8e0';
 export const COUNTRY_FILL_COLOR = wpink;
 export const KAYAKING_COLOR = red;
 export const SNOWBOARD_COLOR = wpink;
-export const Ropejump_COLOR = wpink;
+export const Ropejump_COLOR = orange;
 export const TRAIL_RUN_COLOR = IKB;
