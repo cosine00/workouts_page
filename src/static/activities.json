@@ -4153,5 +4153,20 @@
 "average_speed": 2.869,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 11650300639,
+"name": "YaoYao\u8df3\u7ef3",
+"distance": 2000.0,
+"moving_time": "0:21:30",
+"type": "Ropejump",
+"start_date": "2024-06-14 12:44:16+00:00",
+"start_date_local": "2024-06-14 20:44:16",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.55,
+"source": "strava",
+"streak": 1
 }
 ]
