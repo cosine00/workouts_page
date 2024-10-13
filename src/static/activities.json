@@ -5023,5 +5023,20 @@
 "average_speed": 2.685,
 "source": "strava",
 "streak": 2
+},
+{
+"run_id": 12638141558,
+"name": "\u60e0\u5dde\u4e1c\u6c5f\u76ae\u5212\u8247",
+"distance": 7231.9,
+"moving_time": "1:15:12",
+"type": "Hike",
+"start_date": "2024-10-12 07:34:06+00:00",
+"start_date_local": "2024-10-12 15:34:06",
+"location_country": "S259, \u6a2a\u6ca5\u9547, \u60e0\u57ce\u533a, \u60e0\u5dde\u5e02, \u5e7f\u4e1c\u7701, 516053, \u4e2d\u56fd",
+"summary_polyline": "uiqlCqqlzTxC[xAIrA]vA[z@WNAVF`@b@bAf@\\Hh@DlATz@TrAr@DDGBKKFAB?BJEHA[DMNMZMh@E\\Kx@c@pAk@vAmA`Aq@t@]rA_@ZQr@k@f@Yr@y@ZWRMr@Wr@c@zAkAx@g@hBaBdBgA|@c@~AeAXOJ?Z_@~@y@pCmBj@Y|@u@l@[|AoAd@SfA]b@[pAo@f@a@hBy@`@On@e@l@YdBkA`Bg@~A}@XKtAc@XGDB^Sb@M|@QjAO|@QjAId@Il@A|@I^G~@Er@KnAG^?r@EbCFf@Er@B`AIn@@l@Gv@DhAQr@Dx@Al@Bj@A~ALVHHFBEBNJHbAX^Tl@Pj@Xr@Xb@b@XT`@Tl@V^Zh@VPN`@f@`@TNXNPZTd@XRRb@j@z@z@Zb@XZf@l@xArAX\\vApAf@h@p@l@b@z@t@x@R`@Vd@Zx@f@v@L`@b@n@Rh@Vh@JZRzA@t@Rp@BRErA@bAIbABl@Hv@?tCJp@GtA@fAARWnAFh@?TIt@Az@OvC?DBAEACICBDF?MMKOAMFa@hAw@jAe@`AWVOVUj@Yf@Sr@Ub@Wz@i@p@Y`@YbAs@dBe@t@Ul@u@|AWt@{@fBe@xAm@`BYdAa@dAQd@Wd@KZg@hA_@h@i@lAMR{@`Aa@dAo@jA_@h@S^W`Ag@jAu@bCs@lDe@`BWvAu@jCQ`AWn@Qr@",
+"average_heartrate": 144.8,
+"average_speed": 1.603,
+"source": "strava",
+"streak": 1
 }
 ]
