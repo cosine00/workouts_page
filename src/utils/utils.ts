@@ -18,7 +18,7 @@ import {
   RUN_COLOR,
   KAYAKING_COLOR,
   SNOWBOARD_COLOR,
-  Ropejump_COLOR,
+  Jump_COLOR,
   TRAIL_RUN_COLOR,
 } from './const';
 import { FeatureCollection, LineString } from 'geojson';
@@ -225,8 +225,8 @@ const titleForType = (type: string): string => {
       return RUN_TITLES.KAYAKING_TITLE;
     case 'Snowboard':
       return RUN_TITLES.SNOWBOARD_TITLE;
-    case 'Ropejump':
-      return RUN_TITLES.Ropejump_TITLE;
+    case 'Jump':
+      return RUN_TITLES.Jump_TITLE;
     default:
       return RUN_TITLES.RUN_TITLE;
   }
@@ -272,8 +272,8 @@ const typeForRun = (run: Activity): string => {
       return 'Kayaking';
     case 'Snowboard':
       return 'Snowboard';
-    case 'Ropejump':
-      return 'Ropejump';
+    case 'Jump':
+      return 'Jump';
     default:
       return 'Run';
   }
@@ -317,8 +317,8 @@ const colorFromType = (workoutType: string): string => {
     case 'Kayaking':
       return KAYAKING_COLOR;
     case 'Snowboard':
-    case 'Ropejump':
-      return Ropejump_COLOR;
+    case 'Jump':
+      return Jump_COLOR;
     default:
       return MAIN_COLOR;
   }
