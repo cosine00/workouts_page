@@ -7,7 +7,7 @@ const MUNICIPALITY_CITIES_ARR = [
   '天津市',
   '重庆市',
   '香港特别行政区',
-  '澳门市',
+  '澳门特别行政区',
 ];
 const MAP_LAYER_LIST = [
   'road-label',
