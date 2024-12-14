@@ -5368,5 +5368,20 @@
 "average_speed": 2.532,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 13113498875,
+"name": "\ud83c\udfdd\ufe0f\u6cf0\u56fd\u00b7\u666e\u5409\u00b7\u76ae\u76ae\u5c9b\ud83d\udea4",
+"distance": 24881.5,
+"moving_time": "0:45:34",
+"type": "Hike",
+"start_date": "2024-12-14 08:24:38+00:00",
+"start_date_local": "2024-12-14 15:24:38",
+"location_country": "\u0e15\u0e33\u0e1a\u0e25\u0e2d\u0e48\u0e32\u0e27\u0e19\u0e32\u0e07, \u7532\u7c73\u5e9c, 81210, \u6cf0\u56fd",
+"summary_polyline": "{zen@a}yyQjEqDf@W|@]lBi@zBa@rK{ApCUjH[lEM~KQtDK|Oy@nEM`CAjABfBJhALjARfAXdA`@l@X|@n@x@r@r@v@j@~@d@bA\\hANp@LnA?r@GlA[bB[hAo@|AaArBsAfCqDbGkBrDk@`AuKdOeFfIcExF}FpIcMhTkDfG}DzFyD~FoFxHiC~DaGlIyIlOoEpH_CfEgAjBeEtGgFxHiBtCuFjJ_F~HyEfIiDfFaF|HwD|GcDjFoCvEiErGaDlFyCrEeC`E{CpEiOtVmAhBaErF}BfDyLbQwA|BwFlIsJrOyEjH_EzGiDhFeExGy@vAkBtDk@`A_ErGuEfHyCvFgDhF{BfE_CbEcC|DeDdFiHpLyEfIuDzGaKrOw@vAoAdCk@`AyFnIuBnCoEfG{@rAsCxEsFvHoDbGyE`H_ErG{FjIcJlO_E`GiGlKiBxCiMhRmLvPeFbHiDfFsD|FmBpCqBlCaGfJ{DpFqCrEmBjCyFfIiBtCsCzE{LnQoCxEwE~GoDvF}HzL{EhHoCxDoJ|OoFtHkFxIkCzEqDbFmAfBaErGcNdU}CnEuDxFmDhGwLfSwI~MwClE{GtKcGlJmHpKsBlDwE|Iw@rAyE`HgDzEwBfDmFvIwDvF_CdD{@rAkDfGiCzDwA`C_IzNmDbGcOzUaApAyBhCo@~@yIfPwGrJiAlBsAfCgDjH_CdEwBnDqV|_@wE~GwBfDcBvC{KxS{MlT_QjXaHlJuD~FmAhBuEjGyGzI{JnNsD|F}HzM_BxB}DvEqBlCaI|LiAjB_CfEqDdH}GzLeFxJwA`CwCpEw@xA_ArBk@`Bg@nBo@tC",
+"average_heartrate": 79.4,
+"average_speed": 9.101,
+"source": "strava",
+"streak": 1
 }
 ]
