@@ -5417,7 +5417,7 @@
 {
 "run_id": 13237046768,
 "name": "\u9999\u6e2f City walk",
-"distance": 6788.5,
+"distance": 6783.5,
 "moving_time": "2:17:35",
 "type": "Hike",
 "start_date": "2025-01-01 05:39:53+00:00",
@@ -5447,7 +5447,7 @@
 {
 "run_id": 13253453160,
 "name": "Nike Run Club: \u661f\u671f\u4e94 \u665a\u95f4\u8dd1",
-"distance": 5205.2,
+"distance": 5204.2,
 "moving_time": "0:31:43",
 "type": "Run",
 "start_date": "2025-01-03 10:11:10+00:00",
@@ -5462,7 +5462,7 @@
 {
 "run_id": 13259184254,
 "name": "Nike Run Club: \u661f\u671f\u516d  \u4e0a\u5348\u8dd1",
-"distance": 13147.5,
+"distance": 13143.5,
 "moving_time": "1:17:04",
 "type": "Run",
 "start_date": "2025-01-03 22:06:07+00:00",
@@ -5514,7 +5514,7 @@
 "start_date_local": "2025-01-11 07:42:48",
 "location_country": "\u7b14\u67b6\u5c71\u516c\u56ed\u5929\u6865, \u9ec4\u6728\u5c97\u793e\u533a, \u534e\u5bcc\u8857\u9053, \u798f\u7530\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
 "summary_polyline": "yfuhCaofwT{@Rm@^]^MTEPYh@[`@g@^e@J{@JkB`@e@@SGe@AS@e@CmBXQ@k@CQFSLMLIPEPET?RHn@HP^ZNFR@TATGNKv@URCVAx@Bf@HlD?hCSz@@RDb@Bb@PZZl@Vl@?d@@|@Ah@@NGNQDQR_@FSBUSiBGW?i@PGKe@AoAGm@Sy@a@US@oAU}@BaANw@\\[V]d@_@z@Y`@_@\\k@RkARk@F{@Rm@?}@IcACSHe@BSJg@BWAUDQHQLQb@ET@p@Nb@\\`@RFP@V@RMz@YPEh@Ef@?jAJdB@PCT@~@Eh@ENE`ABRAz@HRH^^THV@JN|@BxAATAPG\\YTi@Ho@Gm@Ai@IUCq@B}@CcAIg@Ag@SMSGUCMSSGU?UDUIcABk@Hi@N]\\SJMNy@|Au@l@u@ZSAuAPUHk@FU?g@EcAC_ALS@UFk@Dg@?SDQPWd@ET@n@@RHP^^RJh@D|@_@|@S~@ArALhBCj@@bCOdA@~@JRL\\^`@Vj@AR@TA`A?RET?PGNMVg@DQ?[DS@UEUIOMm@Eo@NqBISMiACSKQg@O}BCaAH{@Ta@V_@\\Yd@Sb@g@r@a@VSFeC^w@NUB}@KU@g@CUBSFi@BSHaA?UDQFMLMPOl@?TBVPf@^Xf@JR?z@[j@OTA`A?`AJV?j@AjB?`COrADf@Jb@^JRhBHb@@tAEPG`@w@LQAm@Ha@Wm@Mq@Ak@@k@Dm@MwAGSKQc@S}@K}@Ay@Hg@Jg@Nu@j@y@`B[^QJa@RaAP}@J}@Pg@B",
-"average_heartrate": null,
+"average_heartrate": 155.3,
 "average_speed": 3.116,
 "source": "strava",
 "streak": 1
