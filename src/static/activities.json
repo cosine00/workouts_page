@@ -5803,5 +5803,20 @@
 "average_speed": 4.268,
 "source": "strava",
 "streak": 12
+},
+{
+"run_id": 13650561107,
+"name": "YaoYao\u8df3\u7ef3",
+"distance": 5000.0,
+"moving_time": "0:40:00",
+"type": "Jump",
+"start_date": "2025-02-17 12:01:48+00:00",
+"start_date_local": "2025-02-17 20:01:48",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 2.083,
+"source": "strava",
+"streak": 13
 }
 ]
