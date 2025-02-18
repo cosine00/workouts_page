@@ -5814,7 +5814,7 @@
 "start_date_local": "2025-02-17 20:01:48",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": null,
+"average_heartrate": 135.0,
 "average_speed": 2.083,
 "source": "strava",
 "streak": 13
