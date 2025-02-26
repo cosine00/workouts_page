@@ -115,15 +115,15 @@ export {
 
 const nike = 'rgb(224,237,94)';
 const yellow = 'rgb(224,237,94)';
-const green = '#A1E154';
+const green = '#b7c7a3';
 const pink = '#E91E63';
 const orange = '#F57C00';
 const cyan = 'rgb(112,243,255)';
-const IKB = '#A1E0F7';
-const wpink = 'rgb(227, 37, 132)';
+const IKB = '#f6d76b';
+const wpink = '#A1E0F7';
 const gold = 'rgb(242,190,69)';
 const purple = 'rgb(154,118,252)';
-const veryPeri = 'rgb(105,106,173)';//长春花蓝
+const veryPeri = '#48b670';//长春花蓝
 const red = 'rgb(255,0,0)';//大红色
 
 // If your map has an offset please change this line
@@ -131,7 +131,7 @@ const red = 'rgb(255,0,0)';//大红色
 export const NEED_FIX_MAP = false;
 export const MAIN_COLOR = green;
 export const RUN_COLOR = IKB;
-export const RIDE_COLOR = green;
+export const RIDE_COLOR = veryPeri;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
 export const HIKE_COLOR = pink;
 export const SWIM_COLOR = gold;

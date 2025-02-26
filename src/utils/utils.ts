@@ -229,7 +229,7 @@ const titleForType = (type: string): string => {
     case 'Jump':
       return RUN_TITLES.Jump_TITLE;
     case 'Workout':
-    return WORKOUT_TITLES.WORKOUT_TITLE;
+      return RUN_TITLES.WORKOUT_TITLE;
     default:
       return RUN_TITLES.RUN_TITLE;
   }
