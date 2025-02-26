@@ -143,5 +143,5 @@ export const COUNTRY_FILL_COLOR = wpink;
 export const KAYAKING_COLOR = red;
 export const SNOWBOARD_COLOR = wpink;
 export const Jump_COLOR = orange;
-export const WORKOUT_COLOR = nike;
+export const WORKOUT_COLOR = wpink;
 export const TRAIL_RUN_COLOR = IKB;
