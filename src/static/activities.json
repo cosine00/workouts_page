@@ -5820,21 +5820,6 @@
 "streak": 12
 },
 {
-"run_id": 13650547113,
-"name": "\u953b\u70bc\uff08\u665a\u4e0a\uff09",
-"distance": 0.0,
-"moving_time": "1:26:47",
-"type": "Workout",
-"start_date": "2025-02-17 11:12:56+00:00",
-"start_date_local": "2025-02-17 19:12:56",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 117.6,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 13
-},
-{
 "run_id": 13650561107,
 "name": "YaoYao\u8df3\u7ef3",
 "distance": 5000.0,
