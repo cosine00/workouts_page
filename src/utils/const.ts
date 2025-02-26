@@ -71,6 +71,7 @@ const SNOWBOARD_TITLE = IS_CHINESE ? '单板滑雪' : 'Snowboard';
 const Jump_TITLE = IS_CHINESE ? '跳绳' : 'Jump';
 const ROAD_TRIP_TITLE = IS_CHINESE ? '自驾' : 'RoadTrip';
 const FLIGHT_TITLE = IS_CHINESE ? '飞行' : 'Flight';
+const WORKOUT_TITLE = IS_CHINESE ? '无氧训练' : 'Workout';
 
 const RUN_TITLES = {
   FULL_MARATHON_RUN_TITLE,
@@ -89,6 +90,7 @@ const RUN_TITLES = {
   FLIGHT_TITLE,
   SNOWBOARD_TITLE,
   Jump_TITLE,
+  WORKOUT_TITLE,
 };
 
 export {
@@ -141,4 +143,5 @@ export const COUNTRY_FILL_COLOR = wpink;
 export const KAYAKING_COLOR = red;
 export const SNOWBOARD_COLOR = wpink;
 export const Jump_COLOR = orange;
+export const WORKOUT_COLOR = purple;
 export const TRAIL_RUN_COLOR = IKB;
