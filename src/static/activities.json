@@ -5911,7 +5911,7 @@
 },
 {
 "run_id": 13686249379,
-"name": "\u665a\u95f4\u9ad8\u5f3a\u5ea6\u95f4\u6b47\u8bad\u7ec3",
+"name": "HIIT",
 "distance": 0.0,
 "moving_time": "0:31:43",
 "type": "Workout",
@@ -5926,7 +5926,7 @@
 },
 {
 "run_id": 13730215414,
-"name": "\u953b\u70bc\uff08\u4e0a\u5348\uff09",
+"name": "HIIT",
 "distance": 0.0,
 "moving_time": "0:30:23",
 "type": "Workout",
@@ -5971,7 +5971,7 @@
 },
 {
 "run_id": 13730215013,
-"name": "\u6668\u95f4\u9ad8\u5f3a\u5ea6\u95f4\u6b47\u8bad\u7ec3",
+"name": "HIIT",
 "distance": 0.0,
 "moving_time": "0:30:59",
 "type": "Workout",
@@ -5986,7 +5986,7 @@
 },
 {
 "run_id": 13730215135,
-"name": "\u953b\u70bc\uff08\u4e0a\u5348\uff09",
+"name": "HIIT",
 "distance": 0.0,
 "moving_time": "0:20:04",
 "type": "Workout",
