@@ -5595,6 +5595,21 @@
 "streak": 1
 },
 {
+"run_id": 13454600881,
+"name": "\u5348\u540e\u7fbd\u6bdb\u7403",
+"distance": 0.0,
+"moving_time": "0:30:02",
+"type": "Workout",
+"start_date": "2025-01-26 08:27:13+00:00",
+"start_date_local": "2025-01-26 16:27:13",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 110.2,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 1
+},
+{
 "run_id": 13462146206,
 "name": "\u6625\u8282\u00b7\u5c71\u65ee\u65ef",
 "distance": 8084.6,
@@ -5607,7 +5622,7 @@
 "average_heartrate": 163.6,
 "average_speed": 2.869,
 "source": "strava",
-"streak": 1
+"streak": 2
 },
 {
 "run_id": 13526757919,
@@ -5805,6 +5820,21 @@
 "streak": 12
 },
 {
+"run_id": 13650547113,
+"name": "\u953b\u70bc\uff08\u665a\u4e0a\uff09",
+"distance": 0.0,
+"moving_time": "1:26:47",
+"type": "Workout",
+"start_date": "2025-02-17 11:12:56+00:00",
+"start_date_local": "2025-02-17 19:12:56",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 117.6,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 13
+},
+{
 "run_id": 13650561107,
 "name": "YaoYao\u8df3\u7ef3",
 "distance": 5000.0,
@@ -5880,6 +5910,36 @@
 "streak": 2
 },
 {
+"run_id": 13686249379,
+"name": "\u665a\u95f4\u9ad8\u5f3a\u5ea6\u95f4\u6b47\u8bad\u7ec3",
+"distance": 0.0,
+"moving_time": "0:31:43",
+"type": "Workout",
+"start_date": "2025-02-21 11:44:32+00:00",
+"start_date_local": "2025-02-21 19:44:32",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 141.4,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 2
+},
+{
+"run_id": 13730215414,
+"name": "\u953b\u70bc\uff08\u4e0a\u5348\uff09",
+"distance": 0.0,
+"moving_time": "0:30:23",
+"type": "Workout",
+"start_date": "2025-02-22 00:28:48+00:00",
+"start_date_local": "2025-02-22 08:28:48",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 130.4,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 3
+},
+{
 "run_id": 13693362808,
 "name": "Nike Run Club: \u661f\u671f\u516d \u4e0b\u5348\u8dd1",
 "distance": 11113.4,
@@ -5908,5 +5968,35 @@
 "average_speed": 2.835,
 "source": "strava",
 "streak": 4
+},
+{
+"run_id": 13730215013,
+"name": "\u6668\u95f4\u9ad8\u5f3a\u5ea6\u95f4\u6b47\u8bad\u7ec3",
+"distance": 0.0,
+"moving_time": "0:30:59",
+"type": "Workout",
+"start_date": "2025-02-25 22:26:16+00:00",
+"start_date_local": "2025-02-26 06:26:16",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 131.4,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 13730215135,
+"name": "\u953b\u70bc\uff08\u4e0a\u5348\uff09",
+"distance": 0.0,
+"moving_time": "0:20:04",
+"type": "Workout",
+"start_date": "2025-02-25 22:59:29+00:00",
+"start_date_local": "2025-02-26 06:59:29",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 114.2,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 1
 }
 ]
