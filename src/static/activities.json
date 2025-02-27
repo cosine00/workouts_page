@@ -5998,5 +5998,50 @@
 "average_speed": 2.69,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 13736977861,
+"name": "HIIT",
+"distance": 0.0,
+"moving_time": "0:30:57",
+"type": "Workout",
+"start_date": "2025-02-26 22:02:48+00:00",
+"start_date_local": "2025-02-27 06:02:48",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 137.2,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 2
+},
+{
+"run_id": 13736977966,
+"name": "HIIT",
+"distance": 0.0,
+"moving_time": "0:30:50",
+"type": "Workout",
+"start_date": "2025-02-26 22:40:09+00:00",
+"start_date_local": "2025-02-27 06:40:09",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 134.9,
+"average_speed": 0.0,
+"source": "strava",
+"streak": 2
+},
+{
+"run_id": 13737613047,
+"name": "\u901a\u52e4",
+"distance": 4441.7,
+"moving_time": "0:47:33",
+"type": "Hike",
+"start_date": "2025-02-26 23:58:40+00:00",
+"start_date_local": "2025-02-27 07:58:40",
+"location_country": "\u5b9d\u5b89\u5357\u8def, \u7ea2\u6751\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "atrhCmjmwTRMBBh@fALr@JX^h@n@jAT|@X|@l@v@L\\Xb@H`@Zb@Rf@^h@L^^f@R`@NLJPd@rAD^@XCTMTCRDr@AbAYb@u@p@OFi@Jq@BaAJ[TGJC@e@A}AHYCSDo@?S@mACM@CH@t@DFN@r@CnAApB@jCC^@n@EtABnAETBPHJPJXB|AJf@@\\Ed@Ol@AT@|@Kf@P~@@l@H`A?NKp@BZA\\BbABJLZBRIf@C`AFdAAh@F|BGvB@hAAj@HrBS^QJODs@DsCCGBe@@i@Em@FEHBNLR\\NF@REL@LCx@B~@CLDh@@RBt@GPBHDDFDP?hAEr@?h@ERA`@Bz@Px@@`@?^@d@G`@AZ@FHN?HEHD@@@AAGDERJd@JfA?p@G|BD`@@t@Cf@Gd@Bz@AhAFRA|BDR@x@OnAAl@Lj@FfAAVGXAZ@RLb@?^@V?\\AP@bAEf@Bf@Il@@JDH@J?jAHl@AZ@XId@",
+"average_heartrate": 108.5,
+"average_speed": 1.557,
+"source": "strava",
+"streak": 2
 }
 ]
