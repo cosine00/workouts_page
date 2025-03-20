@@ -6163,5 +6163,20 @@
 "average_speed": 1.411,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 13934598821,
+"name": "Nike Run Club: \u661f\u671f\u56db \u665a\u95f4\u8dd1",
+"distance": 6185.3,
+"moving_time": "0:41:11",
+"type": "Run",
+"start_date": "2025-03-20 10:18:07+00:00",
+"start_date_local": "2025-03-20 18:18:07",
+"location_country": "\u4e2d\u822a\u8def, \u534e\u5f3a\u5317, \u534e\u822a\u793e\u533a, \u534e\u5f3a\u5317\u8857\u9053, \u798f\u7530\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "i_rhC{ihwTCk@BUIi@@k@CUIS@WCWDUHSCm@Ki@@gADW?WAUEUAY?cADsBA_ACUT_BISBSMaACm@@{@CQJsCNaA@UJU@U]u@OMASHm@Cg@GQEmBIyA?q@Dg@AUDWCqBIOMOg@CQ?QBwA@{@Ee@Ae@@e@HUAS@c@Gi@De@PsAGSGS?c@FSFKLe@IOKSA{@@SAgBD}@C{@Lg@C[@g@GS@SCi@@SB_A@S@i@Ay@FiA@SD_@ZC`AEd@DUDcA@UESDg@?SNMd@DTCRDz@IvBEPERAPFf@Ib@KR?RDRAx@BPDPEPBv@AR@rAKf@@TD~@CRFTAPBv@EhB?fBIz@@x@Oj@HRDf@ERDbB?j@EZYHQBSIgB?wAEg@Bo@BU@m@AaAGi@AuABe@E}@Je@CWKe@MsBBcADk@AmBGg@W{@AW@WRgADq@CU@yACUGOMOOKqAGW@QBQFq@XUBe@AmAOg@Du@\\S@S?g@Me@QQCS?SBQHKTQJSK[[c@IUASBi@Re@l@w@`@SFS@qA?c@T[^c@PMNKLUf@Y\\_@X?TNx@JNLJJPBTETINg@Ja@TmAjA[`@IR@VMPAVRFt@^PBd@IPDNLPb@b@p@PDPIZ_@NKd@O|@o@PGREPOx@SNIZ]fA]r@_@j@ET@TE~@APBRE`@Q\\_@DURe@?UZiB",
+"average_heartrate": 143.8,
+"average_speed": 2.503,
+"source": "strava",
+"streak": 1
 }
 ]
