@@ -6180,51 +6180,6 @@
 "streak": 3
 },
 {
-"run_id": 14016348120,
-"name": "\u767b\u6708\u8ba1\u5212 1h",
-"distance": 0.0,
-"moving_time": "1:00:07",
-"type": "Workout",
-"start_date": "2025-03-28 23:47:50+00:00",
-"start_date_local": "2025-03-29 07:47:50",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 140.9,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 4
-},
-{
-"run_id": 14035019075,
-"name": "\u767b\u6708\u8ba1\u5212 56min",
-"distance": 0.0,
-"moving_time": "0:56:08",
-"type": "Workout",
-"start_date": "2025-03-29 23:15:19+00:00",
-"start_date_local": "2025-03-30 07:15:19",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 138.4,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 5
-},
-{
-"run_id": 14038285485,
-"name": "\u767b\u6708\u8ba1\u5212 30min",
-"distance": 0.0,
-"moving_time": "0:31:00",
-"type": "Workout",
-"start_date": "2025-03-31 12:14:28+00:00",
-"start_date_local": "2025-03-31 20:14:28",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 138.7,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 6
-},
-{
 "run_id": 14096493876,
 "name": "Nike Run Club: \u661f\u671f\u65e5 \u665a\u95f4\u8dd1",
 "distance": 5202.8,
@@ -6240,21 +6195,6 @@
 "streak": 1
 },
 {
-"run_id": 14112214164,
-"name": "YaoYao\u8df3\u7ef3",
-"distance": 3000.0,
-"moving_time": "0:29:00",
-"type": "Jump",
-"start_date": "2025-04-06 22:30:00+00:00",
-"start_date_local": "2025-04-07 06:30:00",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": null,
-"average_speed": 1.724,
-"source": "strava",
-"streak": 2
-},
-{
 "run_id": 14111911815,
 "name": "\u901a\u52e4\u9a91\u884c",
 "distance": 4044.4,
@@ -6267,6 +6207,6 @@
 "average_heartrate": 118.2,
 "average_speed": 4.008,
 "source": "strava",
-"streak": 3
+"streak": 1
 }
 ]
