@@ -71,7 +71,7 @@ TYPE_DICT = {
     "rowing": "Rowing",
     "RoadTrip": "RoadTrip",
     "flight": "Flight",
-    "kayaking": "Stair",
+    "Kayaking": "Stair",
     "Snowboard": "Snowboard",
     "resort_skiing_snowboarding_ws": "Jump",  # garmin
     "AlpineSki": "Jump",  # strava
