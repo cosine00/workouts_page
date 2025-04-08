@@ -6195,6 +6195,21 @@
 "streak": 1
 },
 {
+"run_id": 14112414153,
+"name": "\u767b\u6708\u8ba1\u5212",
+"distance": 5000.0,
+"moving_time": "1:00:00",
+"type": "Stair",
+"start_date": "2025-04-07 22:07:00+00:00",
+"start_date_local": "2025-04-08 06:07:00",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.389,
+"source": "strava",
+"streak": 1
+},
+{
 "run_id": 14111911815,
 "name": "\u901a\u52e4\u9a91\u884c",
 "distance": 4044.4,
@@ -6206,6 +6221,21 @@
 "summary_polyline": "qqshC}gmwT@f@DZ^LZXNHTD|@D~CZj@@`@JRNNn@NtA?xDJp@Xj@dAfAv@dAxAfBxArBFd@DdAAbBBZHx@ANBBlSKVBLFNRFNBX?lEFhAKzBDpB?zABf@?z@BTJ`@@JKfAHtDD`@Cj@@r@EzABz@?xCANELIJQJSFmDBoCAMDIXL`@HHJBJ?h@GbAAh@E|CBL@LDHJDNBb@B`CGjDHjDC\\EVNv@@n@@hDEv@DrBAxAFjD@zAChADpBAlBB`CFz@CjA@zB@VH\\",
 "average_heartrate": 118.2,
 "average_speed": 4.008,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 14112611936,
+"name": "test",
+"distance": 1000.0,
+"moving_time": "0:10:00",
+"type": "Stair",
+"start_date": "2025-04-08 03:00:58+00:00",
+"start_date_local": "2025-04-08 11:00:58",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.667,
 "source": "strava",
 "streak": 1
 }
