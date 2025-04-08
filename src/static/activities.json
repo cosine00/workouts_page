@@ -5595,21 +5595,6 @@
 "streak": 1
 },
 {
-"run_id": 13454600881,
-"name": "\u7fbd\u6bdb\u7403",
-"distance": 0.0,
-"moving_time": "0:30:02",
-"type": "Workout",
-"start_date": "2025-01-26 08:27:13+00:00",
-"start_date_local": "2025-01-26 16:27:13",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 110.2,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 1
-},
-{
 "run_id": 13462146206,
 "name": "\u6625\u8282\u00b7\u5c71\u65ee\u65ef",
 "distance": 8084.6,
@@ -5622,7 +5607,7 @@
 "average_heartrate": 163.6,
 "average_speed": 2.869,
 "source": "strava",
-"streak": 2
+"streak": 1
 },
 {
 "run_id": 13526757919,
@@ -5851,7 +5836,7 @@
 },
 {
 "run_id": 13674505710,
-"name": "\u901a\u52e4",
+"name": "\u901a\u52e4\u6b65\u884c",
 "distance": 4005.3,
 "moving_time": "0:43:15",
 "type": "Hike",
@@ -5895,36 +5880,6 @@
 "streak": 2
 },
 {
-"run_id": 13686249379,
-"name": "HIIT",
-"distance": 0.0,
-"moving_time": "0:31:43",
-"type": "Workout",
-"start_date": "2025-02-21 11:44:32+00:00",
-"start_date_local": "2025-02-21 19:44:32",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 141.4,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 2
-},
-{
-"run_id": 13730215414,
-"name": "HIIT",
-"distance": 0.0,
-"moving_time": "0:30:23",
-"type": "Workout",
-"start_date": "2025-02-22 00:28:48+00:00",
-"start_date_local": "2025-02-22 08:28:48",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 130.4,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 3
-},
-{
 "run_id": 13693362808,
 "name": "Nike Run Club: \u661f\u671f\u516d \u4e0b\u5348\u8dd1",
 "distance": 11113.4,
@@ -5955,36 +5910,6 @@
 "streak": 4
 },
 {
-"run_id": 13730215013,
-"name": "HIIT",
-"distance": 0.0,
-"moving_time": "0:30:59",
-"type": "Workout",
-"start_date": "2025-02-25 22:26:16+00:00",
-"start_date_local": "2025-02-26 06:26:16",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 131.4,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 1
-},
-{
-"run_id": 13730215135,
-"name": "HIIT",
-"distance": 0.0,
-"moving_time": "0:20:04",
-"type": "Workout",
-"start_date": "2025-02-25 22:59:29+00:00",
-"start_date_local": "2025-02-26 06:59:29",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 114.2,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 1
-},
-{
 "run_id": 13730991559,
 "name": "Nike Run Club: \u661f\u671f\u4e09 \u665a\u95f4\u8dd1",
 "distance": 5282.3,
@@ -6000,38 +5925,8 @@
 "streak": 1
 },
 {
-"run_id": 13736977861,
-"name": "HIIT",
-"distance": 0.0,
-"moving_time": "0:30:57",
-"type": "Workout",
-"start_date": "2025-02-26 22:02:48+00:00",
-"start_date_local": "2025-02-27 06:02:48",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 137.2,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 2
-},
-{
-"run_id": 13736977966,
-"name": "HIIT",
-"distance": 0.0,
-"moving_time": "0:30:50",
-"type": "Workout",
-"start_date": "2025-02-26 22:40:09+00:00",
-"start_date_local": "2025-02-27 06:40:09",
-"location_country": null,
-"summary_polyline": "",
-"average_heartrate": 134.9,
-"average_speed": 0.0,
-"source": "strava",
-"streak": 2
-},
-{
 "run_id": 13737613047,
-"name": "\u901a\u52e4",
+"name": "\u901a\u52e4\u6b65\u884c",
 "distance": 4441.7,
 "moving_time": "0:47:33",
 "type": "Hike",
@@ -6181,7 +6076,7 @@
 },
 {
 "run_id": 13941165018,
-"name": "\u901a\u52e4",
+"name": "\u901a\u52e4\u9a91\u884c",
 "distance": 4044.2,
 "moving_time": "0:18:18",
 "type": "Ride",
@@ -6256,7 +6151,7 @@
 },
 {
 "run_id": 13997862433,
-"name": "\u901a\u52e4",
+"name": "\u901a\u52e4\u9a91\u884c",
 "distance": 4141.4,
 "moving_time": "0:18:17",
 "type": "Ride",
@@ -6271,7 +6166,7 @@
 },
 {
 "run_id": 14007213287,
-"name": "\u901a\u52e4",
+"name": "\u901a\u52e4\u9a91\u884c",
 "distance": 4159.0,
 "moving_time": "0:18:26",
 "type": "Ride",
