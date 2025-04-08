@@ -71,7 +71,7 @@ TYPE_DICT = {
     "rowing": "Rowing",
     "RoadTrip": "RoadTrip",
     "flight": "Flight",
-    "kayaking": "Kayaking",
+    "kayaking": "Stair",
     "Snowboard": "Snowboard",
     "resort_skiing_snowboarding_ws": "Jump",  # garmin
     "AlpineSki": "Jump",  # strava
@@ -88,7 +88,7 @@ MAPPING_TYPE = [
     "Trail Run",
     "Swim",
     "RoadTrip",
-    "Kayaking",
+    "Stair",
     "Snowboard",
     "Jump",
     "Workout",

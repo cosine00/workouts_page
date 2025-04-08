@@ -66,7 +66,7 @@ const INDOOR_RIDE_TITLE = IS_CHINESE ? '室内骑行' : 'Indoor Ride';
 const VIRTUAL_RIDE_TITLE = IS_CHINESE ? '虚拟骑行' : 'Virtual Ride';
 const HIKE_TITLE = IS_CHINESE ? '徒步' : 'Hike';
 const ROWING_TITLE = IS_CHINESE ? '划船' : 'Rowing';
-const KAYAKING_TITLE = IS_CHINESE ? '皮划艇' : 'Kayaking';
+const Stair_TITLE = IS_CHINESE ? '爬楼梯' : 'Stair';
 const SNOWBOARD_TITLE = IS_CHINESE ? '单板滑雪' : 'Snowboard';
 const Jump_TITLE = IS_CHINESE ? '跳绳' : 'Jump';
 const ROAD_TRIP_TITLE = IS_CHINESE ? '自驾' : 'RoadTrip';
@@ -84,7 +84,7 @@ const RUN_TITLES = {
   VIRTUAL_RIDE_TITLE,
   HIKE_TITLE,
   ROWING_TITLE,
-  KAYAKING_TITLE,
+  Stair_TITLE,
   SWIM_TITLE,
   ROAD_TRIP_TITLE,
   FLIGHT_TITLE,
@@ -140,7 +140,7 @@ export const ROAD_TRIP_COLOR = purple;
 export const FLIGHT_COLOR = wpink;
 export const PROVINCE_FILL_COLOR = '#47b8e0';
 export const COUNTRY_FILL_COLOR = wpink;
-export const KAYAKING_COLOR = red;
+export const Stair_COLOR = purple;
 export const SNOWBOARD_COLOR = wpink;
 export const Jump_COLOR = orange;
 export const WORKOUT_COLOR = wpink;

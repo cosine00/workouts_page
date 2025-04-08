@@ -16,7 +16,7 @@ import {
   ROAD_TRIP_COLOR,
   FLIGHT_COLOR,
   RUN_COLOR,
-  KAYAKING_COLOR,
+  Stair_COLOR,
   SNOWBOARD_COLOR,
   Jump_COLOR,
   WORKOUT_COLOR,
@@ -223,7 +223,7 @@ const titleForType = (type: string): string => {
     case 'Flight':
       return RUN_TITLES.FLIGHT_TITLE;
     case 'Kayaking':
-      return RUN_TITLES.KAYAKING_TITLE;
+      return RUN_TITLES.Stair_TITLE;
     case 'Snowboard':
       return RUN_TITLES.SNOWBOARD_TITLE;
     case 'Jump':
@@ -271,8 +271,8 @@ const typeForRun = (run: Activity): string => {
       return 'RoadTrip';
     case 'Flight':
       return 'Flight';
-    case 'Kayaking':
-      return 'Kayaking';
+    case 'Stair':
+      return 'Stair';
     case 'Snowboard':
       return 'Snowboard';
     case 'Jump':
@@ -319,8 +319,8 @@ const colorFromType = (workoutType: string): string => {
       return ROAD_TRIP_COLOR;
     case 'Flight':
       return FLIGHT_COLOR;
-    case 'Kayaking':
-      return KAYAKING_COLOR;
+    case 'Stair':
+      return Stair_COLOR;
     case 'Snowboard':
       return SNOWBOARD_COLOR;
     case 'Jump':
