@@ -222,7 +222,7 @@ const titleForType = (type: string): string => {
       return RUN_TITLES.ROAD_TRIP_TITLE;
     case 'Flight':
       return RUN_TITLES.FLIGHT_TITLE;
-    case 'Kayaking':
+    case 'Stair':
       return RUN_TITLES.Stair_TITLE;
     case 'Snowboard':
       return RUN_TITLES.SNOWBOARD_TITLE;
