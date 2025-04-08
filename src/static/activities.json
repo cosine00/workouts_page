@@ -6240,6 +6240,36 @@
 "streak": 1
 },
 {
+"run_id": 14112214164,
+"name": "YaoYao\u8df3\u7ef3",
+"distance": 3000.0,
+"moving_time": "0:29:00",
+"type": "Jump",
+"start_date": "2025-04-06 22:30:00+00:00",
+"start_date_local": "2025-04-07 06:30:00",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.724,
+"source": "strava",
+"streak": 2
+},
+{
+"run_id": 14112216674,
+"name": "\u767b\u6708\u8ba1\u5212",
+"distance": 2400.0,
+"moving_time": "0:30:00",
+"type": "Kayaking",
+"start_date": "2025-04-07 22:31:00+00:00",
+"start_date_local": "2025-04-08 06:31:00",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.333,
+"source": "strava",
+"streak": 3
+},
+{
 "run_id": 14111911815,
 "name": "\u901a\u52e4\u9a91\u884c",
 "distance": 4044.4,
@@ -6252,6 +6282,6 @@
 "average_heartrate": 118.2,
 "average_speed": 4.008,
 "source": "strava",
-"streak": 1
+"streak": 3
 }
 ]
