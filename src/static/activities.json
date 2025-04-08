@@ -6225,6 +6225,21 @@
 "streak": 1
 },
 {
+"run_id": 14112641481,
+"name": "test2",
+"distance": 2700.0,
+"moving_time": "0:31:00",
+"type": "Stair",
+"start_date": "2025-04-08 02:37:43+00:00",
+"start_date_local": "2025-04-08 10:37:43",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.452,
+"source": "strava",
+"streak": 1
+},
+{
 "run_id": 14112611936,
 "name": "test",
 "distance": 1000.0,
