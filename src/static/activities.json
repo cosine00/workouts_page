@@ -6298,5 +6298,20 @@
 "average_speed": 2.647,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 14170654283,
+"name": "\u901a\u52e4\u6b65\u884c",
+"distance": 3908.1,
+"moving_time": "0:42:34",
+"type": "Hike",
+"start_date": "2025-04-13 23:55:55+00:00",
+"start_date_local": "2025-04-14 07:55:55",
+"location_country": "\u6842\u56ed\u8def, \u6842\u6728\u56ed\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "irshCugmwTJh@LZLLh@VXHbDZfAN`@GH@VJ\\^Hb@Fl@?j@Db@AnADZ@d@B`@HRX`@RRh@\\LNFRFJXR|@z@t@d@FHF\\V\\Rp@DFHAFBFrAEX@pAC`@FXLJATDRDFTJ|@CP@vB?d@BdAI^BtBChABhAE^@TFJJNb@BnAL`AEZAZId@?h@CPFXG~@Fb@@xAFv@Ej@D\\?PIdABPN\\FhAGfBFR@PEl@BlBGbB?rBDX?NI`ACA?H_BbDACDE@I^M`@?TDFHHr@BdADb@?^Mb@?PZhBIbA?~@Dx@AXGX?x@DTRb@Np@Er@IX?VHZAJQx@?d@An@Hv@?r@F\\CXK\\@XE^Bp@C~ANrA?VBTANKZAJFl@Gx@Pj@EhA@\\Eh@?nBFN@jBHb@@PANIVCNFZAHKTSJCH",
+"average_heartrate": 107.2,
+"average_speed": 1.53,
+"source": "strava",
+"streak": 1
 }
 ]
