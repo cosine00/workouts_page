@@ -6313,5 +6313,20 @@
 "average_speed": 1.53,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 14173876782,
+"name": "\u767b\u6708\u8ba1\u5212",
+"distance": 2700.0,
+"moving_time": "0:30:00",
+"type": "Stair",
+"start_date": "2025-04-14 11:38:51+00:00",
+"start_date_local": "2025-04-14 19:38:51",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": null,
+"average_speed": 1.5,
+"source": "strava",
+"streak": 1
 }
 ]
