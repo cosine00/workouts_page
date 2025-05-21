@@ -6658,5 +6658,20 @@
 "average_speed": 2.415,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 14545664961,
+"name": "\u901a\u52e4\u9a91\u884c",
+"distance": 4062.1,
+"moving_time": "0:16:11",
+"type": "Ride",
+"start_date": "2025-05-21 00:01:03+00:00",
+"start_date_local": "2025-05-21 08:01:03",
+"location_country": "\u7ea2\u6842\u4e2d\u5b66, \u6842\u56ed\u8def, \u6842\u6728\u56ed\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "mqshCchmwTB|@BNDDTH^ZHDjAHnATj@@jAJf@PPNJ\\Z`C@d@Gx@@VFv@Nh@V`@RX\\ZhA`BhBtBhAbB@NBpAA`BHf@?VH^JDT?~DCbBE`IAP@PFLJLVD^D|ADpF?rFJzDEv@Ax@DdBF|@@lBEdADbECn@EPKLKHUFqDDk@AiAB[AKHFNJN\\J`BJbE@P@LFHHFR@j@AbADlB@nGFn@Ed@?^PlBB`A@xBG|CFlDCfD@nAH|A@vCCpABdACtBBn@Fl@",
+"average_heartrate": 120.0,
+"average_speed": 4.183,
+"source": "strava",
+"streak": 2
 }
 ]
