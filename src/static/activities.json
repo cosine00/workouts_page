@@ -6519,7 +6519,7 @@
 "start_date_local": "2025-05-07 19:10:00",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": null,
+"average_heartrate": 140.0,
 "average_speed": 1.333,
 "source": "strava",
 "streak": 1
