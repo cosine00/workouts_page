@@ -6894,7 +6894,7 @@
 "start_date_local": "2025-06-16 18:42:00",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": null,
+"average_heartrate": 146.0,
 "average_speed": 1.198,
 "source": "strava",
 "streak": 1
@@ -6909,7 +6909,7 @@
 "start_date_local": "2025-06-19 18:50:00",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": null,
+"average_heartrate": 148.0,
 "average_speed": 1.316,
 "source": "strava",
 "streak": 1
