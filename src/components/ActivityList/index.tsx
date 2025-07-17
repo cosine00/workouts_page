@@ -136,13 +136,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
         <p>
           <strong>{ACTIVITY_TOTAL.TOTAL_DISTANCE_TITLE}:</strong>{' '}
           {summary.totalDistance.toFixed(2)} km
-        </p>
-        {SHOW_ELEVATION_GAIN && summary.totalElevationGain !== undefined && (
-          <p>
-            <strong>{ACTIVITY_TOTAL.TOTAL_ELEVATION_GAIN_TITLE}:</strong>{' '}
-            {summary.totalElevationGain.toFixed(0)} m
-          </p>
-        )}
+        </p>        
         <p>
           <strong>{ACTIVITY_TOTAL.AVERAGE_SPEED_TITLE}:</strong>{' '}
           {isFastType(activityType)
