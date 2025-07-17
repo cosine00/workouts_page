@@ -1,5 +1,3 @@
-@import '../../styles/variables.scss';
-
 .locationSVG {
   height: 100%;
   width: 100%;
@@ -24,12 +22,11 @@
   margin-top: 0.1rem;
   font-size: 1rem;
   text-align: center;
-  color: white;
-  font-family: $global-font-family;
+  color: rgb(204, 204, 204);
 }
 
 .selected {
-  color: $green;
+  color: rgb(0, 237, 94);
 }
 
 .runTitle {
@@ -38,8 +35,8 @@
   position: absolute;
   bottom: 0px;
   left: 120px;
-  font-family: $global-font-family;
   cursor: pointer;
+  color: rgb(224, 237, 94);
 }
 
 .lights {
@@ -50,7 +47,6 @@
   width: 29px;
   height: 38px;
 }
-
 
 .lightsOn {
   height: 38px !important;

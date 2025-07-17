@@ -50,7 +50,7 @@ const Index = () => {
   ) => {
     scrollToMap();
     if (name != 'Year') {
-      setYear(thisYear)
+      setYear(thisYear);
     }
     setActivity(filterAndSortRuns(activities, item, func, sortDateFunc));
     setRunIndex(-1);
@@ -75,6 +75,7 @@ const Index = () => {
     changeByItem(city, 'City', filterCityRuns);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const changeTitle = (title: string) => {
     changeByItem(title, 'Title', filterTitleRuns);
   };
@@ -83,21 +84,30 @@ const Index = () => {
     changeByItem(type, 'Type', filterTypeRuns);
   };
 
-  const changeTypeInYear = (year:string, type: string) => {
+  const changeTypeInYear = (year: string, type: string) => {
     scrollToMap();
     // type in year, filter year first, then type
-    if(year != 'Total'){
+    if (year != 'Total') {
       setYear(year);
-      setActivity(filterAndSortRuns(activities, year, filterYearRuns, sortDateFunc, type, filterTypeRuns));
-    }
-    else {
+      setActivity(
+        filterAndSortRuns(
+          activities,
+          year,
+          filterYearRuns,
+          sortDateFunc,
+          type,
+          filterTypeRuns
+        )
+      );
+    } else {
       setYear(thisYear);
-      setActivity(filterAndSortRuns(activities, type, filterTypeRuns, sortDateFunc));
+      setActivity(
+        filterAndSortRuns(activities, type, filterTypeRuns, sortDateFunc)
+      );
     }
     setRunIndex(-1);
     setTitle(`${year} ${type} Type Heatmap`);
   };
-
 
   const locateActivity = (runIds: RunIds) => {
     const ids = new Set(runIds);
@@ -172,9 +182,9 @@ const Index = () => {
         const titleEl = target.querySelector('title');
         if (titleEl) {
           // If the runDate exists in the <title> element, it means that a date square has been clicked.
-          const [runDate] = titleEl.innerHTML.match(/\d{4}-\d{1,2}-\d{1,2}/) || [
-            `${+thisYear + 1}`,
-          ];
+          const [runDate] = titleEl.innerHTML.match(
+            /\d{4}-\d{1,2}-\d{1,2}/
+          ) || [`${+thisYear + 1}`];
           const runIDsOnDate = runs
             .filter((r) => r.start_date_local.slice(0, 10) === runDate)
             .map((r) => r.run_id);
@@ -184,7 +194,7 @@ const Index = () => {
           locateActivity(runIDsOnDate);
         }
       }
-    }
+    };
     svgStat.addEventListener('click', handleClick);
     return () => {
       svgStat && svgStat.removeEventListener('click', handleClick);
@@ -193,8 +203,8 @@ const Index = () => {
 
   return (
     <Layout>
-      <div className="fl w-30-l">
-        <h1 className="f1 fw9 i">
+      <div className="w-full lg:w-1/4">
+        <h1 className="my-12 text-5xl font-extrabold italic">
           <a href="/">{siteTitle}</a>
         </h1>
         {(viewState.zoom ?? 0) <= 3 && IS_CHINESE ? (
@@ -205,10 +215,14 @@ const Index = () => {
             onClickTypeInYear={changeTypeInYear}
           />
         ) : (
-          <YearsStat year={year} onClick={changeYear} onClickTypeInYear={changeTypeInYear}/>
+          <YearsStat
+            year={year}
+            onClick={changeYear}
+            onClickTypeInYear={changeTypeInYear}
+          />
         )}
       </div>
-      <div className="fl w-100 w-70-l">
+      <div className="w-full lg:w-4/5">
         <RunMap
           title={title}
           viewState={viewState}
@@ -230,7 +244,7 @@ const Index = () => {
         )}
       </div>
       {/* Enable Audiences in Vercel Analytics: https://vercel.com/docs/concepts/analytics/audiences/quickstart */}
-      <Analytics />
+      {import.meta.env.VERCEL && <Analytics />}
     </Layout>
   );
 };

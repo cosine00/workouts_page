@@ -1,13 +1,14 @@
 import * as mapboxPolyline from '@mapbox/polyline';
 import gcoord from 'gcoord';
-import { WebMercatorViewport } from 'viewport-mercator-project';
-import { chinaGeojson } from '@/static/run_countries';
+import { WebMercatorViewport } from '@math.gl/web-mercator';
+import { chinaGeojson, RPGeometry } from '@/static/run_countries';
+import worldGeoJson from '@surbowl/world-geo-json-zh/world.zh.json';
 import { chinaCities } from '@/static/city';
 import {
+  MAIN_COLOR,
   MUNICIPALITY_CITIES_ARR,
   NEED_FIX_MAP,
   RUN_TITLES,
-  MAIN_COLOR,
   RIDE_COLOR,
   VIRTUAL_RIDE_COLOR,
   HIKE_COLOR,
@@ -21,8 +22,15 @@ import {
   Jump_COLOR,
   WORKOUT_COLOR,
   TRAIL_RUN_COLOR,
+  RICH_TITLE,
+  MAP_TILE_STYLES,
 } from './const';
-import { FeatureCollection, LineString } from 'geojson';
+import {
+  FeatureCollection,
+  LineString,
+  Feature,
+  GeoJsonProperties,
+} from 'geojson';
 
 export type Coordinate = [number, number];
 
@@ -34,11 +42,13 @@ export interface Activity {
   distance: number;
   moving_time: string;
   type: string;
+  subtype: string;
   start_date: string;
   start_date_local: string;
-  location_country: string;
-  summary_polyline: string;
-  average_heartrate?: number;
+  location_country?: string | null;
+  summary_polyline?: string | null;
+  average_heartrate?: number | null;
+  elevation_gain: number | null;
   average_speed: number;
   streak: number;
 }
@@ -95,11 +105,10 @@ const scrollToMap = () => {
   }
 };
 
-const pattern = /([\u4e00-\u9fa5]{2,}(市|自治州|特别行政区|盟|地区))/g;
-const extractLocations = (str: string): string[] => {
+const extractCities = (str: string): string[] => {
   const locations = [];
   let match;
-
+  const pattern = /([\u4e00-\u9fa5]{2,}(市|自治州|特别行政区|盟|地区))/g;
   while ((match = pattern.exec(str)) !== null) {
     locations.push(match[0]);
   }
@@ -107,7 +116,32 @@ const extractLocations = (str: string): string[] => {
   return locations;
 };
 
+const extractDistricts = (str: string): string[] => {
+  const locations = [];
+  let match;
+  const pattern = /([\u4e00-\u9fa5]{2,}(区|县))/g;
+  while ((match = pattern.exec(str)) !== null) {
+    locations.push(match[0]);
+  }
+
+  return locations;
+};
+
+const extractCoordinate = (str: string): [number, number] | null => {
+  const pattern = /'latitude': ([-]?\d+\.\d+).*?'longitude': ([-]?\d+\.\d+)/;
+  const match = str.match(pattern);
+
+  if (match) {
+    const latitude = parseFloat(match[1]);
+    const longitude = parseFloat(match[2]);
+    return [longitude, latitude];
+  }
+
+  return null;
+};
+
 const cities = chinaCities.map((c) => c.name);
+const locationCache = new Map<number, ReturnType<typeof locationForRun>>();
 // what about oversea?
 const locationForRun = (
   run: Activity
@@ -115,23 +149,31 @@ const locationForRun = (
   country: string;
   province: string;
   city: string;
+  coordinate: [number, number] | null;
 } => {
+  if (locationCache.has(run.run_id)) {
+    return locationCache.get(run.run_id)!;
+  }
   let location = run.location_country;
   let [city, province, country] = ['', '', ''];
+  let coordinate = null;
   if (location) {
     // Only for Chinese now
-    // should fiter 臺灣
-    const cityMatch = extractLocations(location);
+    // should filter 臺灣
+    const cityMatch = extractCities(location);
     const provinceMatch = location.match(/[\u4e00-\u9fa5]{2,}(省|自治区)/);
 
     if (cityMatch) {
       city = cities.find((value) => cityMatch.includes(value)) as string;
+
       if (!city) {
         city = '';
       }
     }
     if (provinceMatch) {
       [province] = provinceMatch;
+      // try to extract city coord from location_country info
+      coordinate = extractCoordinate(location);
     }
     const l = location.split(',');
     // or to handle keep location format
@@ -147,9 +189,17 @@ const locationForRun = (
   }
   if (MUNICIPALITY_CITIES_ARR.includes(city)) {
     province = city;
+    if (location) {
+      const districtMatch = extractDistricts(location);
+      if (districtMatch.length > 0) {
+        city = districtMatch[districtMatch.length - 1];
+      }
+    }
   }
 
-  return { country, province, city };
+  const r = { country, province, city, coordinate };
+  locationCache.set(run.run_id, r);
+  return r;
 };
 
 const intComma = (x = '') => {
@@ -161,6 +211,9 @@ const intComma = (x = '') => {
 
 const pathForRun = (run: Activity): Coordinate[] => {
   try {
+    if (!run.summary_polyline) {
+      return [];
+    }
     const c = mapboxPolyline.decode(run.summary_polyline);
     // reverse lat long for mapbox
     c.forEach((arr) => {
@@ -168,6 +221,13 @@ const pathForRun = (run: Activity): Coordinate[] => {
         ? [arr[1], arr[0]]
         : gcoord.transform([arr[1], arr[0]], gcoord.GCJ02, gcoord.WGS84);
     });
+    // try to use location city coordinate instead , if runpath is incomplete
+    if (c.length === 2 && String(c[0]) === String(c[1])) {
+      const { coordinate } = locationForRun(run);
+      if (coordinate?.[0] && coordinate?.[1]) {
+        return [coordinate, coordinate];
+      }
+    }
     return c;
   } catch (err) {
     return [];
@@ -181,20 +241,26 @@ const geoJsonForRuns = (runs: Activity[]): FeatureCollection<LineString> => ({
 
     return {
       type: 'Feature',
+      properties: {
+        color: colorFromType(run.type),
+      },
       geometry: {
         type: 'LineString',
         coordinates: points,
         workoutType: run.type,
-      },
-      properties: {
-        'color': colorFromType(run.type),
       },
       name: run.name,
     };
   }),
 });
 
-const geoJsonForMap = () => chinaGeojson;
+const geoJsonForMap = (): FeatureCollection<RPGeometry> => ({
+  type: 'FeatureCollection',
+  features: [...worldGeoJson.features, ...chinaGeojson.features] as Feature<
+    RPGeometry,
+    GeoJsonProperties
+  >[],
+});
 
 const titleForType = (type: string): string => {
   switch (type) {
@@ -233,25 +299,23 @@ const titleForType = (type: string): string => {
     default:
       return RUN_TITLES.RUN_TITLE;
   }
-}
+};
 
 const typeForRun = (run: Activity): string => {
-  const type = run.type
+  const type = run.type;
   var distance = run.distance / 1000;
   switch (type) {
     case 'Run':
       if (distance >= 40) {
         return 'Full Marathon';
-      }
-      else if (distance > 20) {
+      } else if (distance > 20) {
         return 'Half Marathon';
       }
       return 'Run';
     case 'Trail Run':
       if (distance >= 40) {
         return 'Full Marathon';
-      }
-      else if (distance > 20) {
+      } else if (distance > 20) {
         return 'Half Marathon';
       }
       return 'Trail Run';
@@ -280,20 +344,32 @@ const typeForRun = (run: Activity): string => {
     case 'Workout':
       return 'Workout';
     default:
-      return 'Run';
+      return type;
   }
-}
+};
 
 const titleForRun = (run: Activity): string => {
   const type = run.type;
-  if (type == 'Run' || type == 'Trail Run'){
-      const runDistance = run.distance / 1000;
-      if (runDistance >= 40) {
-        return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
-      }
-      else if (runDistance > 20) {
-        return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
-      }
+  if (RICH_TITLE) {
+    // 1. try to use user defined name
+    if (run.name != '') {
+      return run.name;
+    }
+    // 2. try to use location+type if the location is available, eg. 'Shanghai Run'
+    const { city } = locationForRun(run);
+    const activity_sport = titleForType(typeForRun(run));
+    if (city && city.length > 0 && activity_sport.length > 0) {
+      return `${city} ${activity_sport}`;
+    }
+  }
+  // 3. use time+length if location or type is not available
+  if (type == 'Run' || type == 'Trail Run') {
+    const runDistance = run.distance / 1000;
+    if (runDistance >= 40) {
+      return RUN_TITLES.FULL_MARATHON_RUN_TITLE;
+    } else if (runDistance > 20) {
+      return RUN_TITLES.HALF_MARATHON_RUN_TITLE;
+    }
   }
   return titleForType(type);
 };
@@ -353,6 +429,9 @@ const getBoundsForGeoData = (
   if (points.length === 0) {
     return { longitude: 20, latitude: 20, zoom: 3 };
   }
+  if (points.length === 2 && String(points[0]) === String(points[1])) {
+    return { longitude: points[0][0], latitude: points[0][1], zoom: 9 };
+  }
   // Calculate corner values of bounds
   const pointsLong = points.map((point) => point[0]) as number[];
   const pointsLat = points.map((point) => point[1]) as number[];
@@ -388,15 +467,21 @@ const filterTitleRuns = (run: Activity, title: string) =>
   titleForRun(run) === title;
 
 const filterTypeRuns = (run: Activity, type: string) => {
-  switch (type){
+  switch (type) {
     case 'Full Marathon':
-      return (run.type === 'Run' || run.type === 'Trail Run') && run.distance > 40000
+      return (
+        (run.type === 'Run' || run.type === 'Trail Run') && run.distance > 40000
+      );
     case 'Half Marathon':
-      return (run.type === 'Run' || run.type === 'Trail Run') && run.distance < 40000 && run.distance > 20000
+      return (
+        (run.type === 'Run' || run.type === 'Trail Run') &&
+        run.distance < 40000 &&
+        run.distance > 20000
+      );
     default:
-      return run.type === type
+      return run.type === type;
   }
-}
+};
 
 const filterAndSortRuns = (
   activities: Activity[],
@@ -404,26 +489,39 @@ const filterAndSortRuns = (
   filterFunc: (_run: Activity, _bvalue: string) => boolean,
   sortFunc: (_a: Activity, _b: Activity) => number,
   item2: string | null,
-  filterFunc2: ((_run: Activity, _bvalue: string) => boolean) | null,
+  filterFunc2: ((_run: Activity, _bvalue: string) => boolean) | null
 ) => {
   let s = activities;
   if (item !== 'Total') {
     s = activities.filter((run) => filterFunc(run, item));
   }
-  if(filterFunc2 != null && item2 != null){
+  if (filterFunc2 != null && item2 != null) {
     s = s.filter((run) => filterFunc2(run, item2));
   }
   return s.sort(sortFunc);
 };
 
 const sortDateFunc = (a: Activity, b: Activity) => {
-  // @ts-ignore
   return (
-    new Date(b.start_date_local.replace(' ', 'T')) -
-    new Date(a.start_date_local.replace(' ', 'T'))
+    new Date(b.start_date_local.replace(' ', 'T')).getTime() -
+    new Date(a.start_date_local.replace(' ', 'T')).getTime()
   );
 };
 const sortDateFuncReverse = (a: Activity, b: Activity) => sortDateFunc(b, a);
+
+const getMapStyle = (vendor: string, styleName: string, token: string) => {
+  const style = (MAP_TILE_STYLES as any)[vendor][styleName];
+  if (!style) {
+    return MAP_TILE_STYLES.default;
+  }
+  if (vendor === 'maptiler' || vendor === 'stadiamaps') {
+    return style + token;
+  }
+  return style;
+};
+
+const isTouchDevice = () =>
+  'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 export {
   titleForShow,
@@ -448,4 +546,6 @@ export {
   colorFromType,
   formatRunTime,
   convertMovingTime2Sec,
+  getMapStyle,
+  isTouchDevice,
 };

@@ -9,6 +9,7 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 from collections import namedtuple
 from datetime import datetime, timedelta
+from xml.dom import minidom
 
 import eviltransform
 import gpxpy
@@ -45,6 +46,8 @@ FitType = np.dtype(
 # device info
 user_agent = "CodoonSport(8.9.0 1170;Android 7;Sony XZ1)"
 did = "24-00000000-03e1-7dd7-0033-c5870033c588"
+# May be Forerunner 945?
+CONNECT_API_PART_NUMBER = "006-D2449-00"
 
 # fixed params
 base_url = "https://api.codoon.com"
@@ -61,15 +64,15 @@ TYPE_DICT = {
 
 # for tcx type
 TCX_TYPE_DICT = {
-    0: "Hike",
+    0: "Hiking",
     1: "Running",
-    2: "Ride",
+    2: "Biking",
 }
 
 # only for running sports, if you want others, please change the True to False
 IS_ONLY_RUN = False
 
-# If your points need trans from gcj02 to wgs84 coordinate which use by Mappbox
+# If your points need trans from gcj02 to wgs84 coordinate which use by Mapbox
 TRANS_GCJ02_TO_WGS84 = False
 # trans the coordinate data until the TRANS_END_DATE, work with TRANS_GCJ02_TO_WGS84 = True
 TRANS_END_DATE = "2014-03-24"
@@ -101,20 +104,9 @@ def download_codoon_gpx(gpx_data, log_id):
         file_path = os.path.join(GPX_FOLDER, str(log_id) + ".gpx")
         with open(file_path, "w") as fb:
             fb.write(gpx_data)
-    except:
-        print(f"wrong id {log_id}")
+    except Exception as e:
+        print(f"wrong id {log_id} error {str(e)}")
         pass
-
-
-def set_array(fit_array, array_time, array_bpm, array_lati, array_longi, ele):
-    fit_data = np.array(
-        (array_time, array_bpm, array_lati, array_longi, ele), dtype=FitType
-    )
-    if fit_array is None:
-        fit_array = np.array([fit_data], dtype=FitType)
-    else:
-        fit_array = np.append(fit_array, fit_data)
-    return fit_array
 
 
 def formated_input(
@@ -127,6 +119,9 @@ def formated_input(
 
 
 def tcx_output(fit_array, run_data):
+    """
+    If you want to make a more detailed tcx file, please refer to oppo_sync.py
+    """
     # route ID
     fit_id = str(run_data["id"])
     # local time
@@ -149,7 +144,7 @@ def tcx_output(fit_array, run_data):
         },
     )
     # xml tree
-    tree = ET.ElementTree(training_center_database)
+    ET.ElementTree(training_center_database)
     # Activities
     activities = ET.Element("Activities")
     training_center_database.append(activities)
@@ -163,12 +158,15 @@ def tcx_output(fit_array, run_data):
     activity_id.text = fit_start_time  # Codoon use start_time as ID
     activity.append(activity_id)
     #   Creator
-    activity_creator = ET.Element("Creator")
+    activity_creator = ET.Element("Creator", {"xsi:type": "Device_t"})
     activity.append(activity_creator)
     #       Name
     activity_creator_name = ET.Element("Name")
-    activity_creator_name.text = "咕咚"
+    activity_creator_name.text = "Codoon"
     activity_creator.append(activity_creator_name)
+    activity_creator_product = ET.Element("ProductID")
+    activity_creator_product.text = "3441"
+    activity_creator.append(activity_creator_product)
     #   Lap
     activity_lap = ET.Element("Lap", {"StartTime": fit_start_time})
     activity.append(activity_lap)
@@ -215,17 +213,29 @@ def tcx_output(fit_array, run_data):
             altitude_meters = ET.Element("AltitudeMeters")
             altitude_meters.text = bytes.decode(i["elevation"])
             tp.append(altitude_meters)
-
+    # Author
+    author = ET.Element("Author", {"xsi:type": "Application_t"})
+    training_center_database.append(author)
+    author_name = ET.Element("Name")
+    author_name.text = "Connect Api"
+    author.append(author_name)
+    author_lang = ET.Element("LangID")
+    author_lang.text = "en"
+    author.append(author_lang)
+    author_part = ET.Element("PartNumber")
+    author_part.text = CONNECT_API_PART_NUMBER
+    author.append(author_part)
     # write to TCX file
-    tree.write(
-        TCX_FOLDER + "/" + fit_id + ".tcx", encoding="utf-8", xml_declaration=True
-    )
+    xml_str = minidom.parseString(ET.tostring(training_center_database)).toprettyxml()
+    with open(TCX_FOLDER + "/" + fit_id + ".tcx", "w") as f:
+        f.write(str(xml_str))
 
 
-# TODO time complexity is too heigh, need to be reduced
 def tcx_job(run_data):
     # fit struct array
     fit_array = None
+    fit_list = []
+    fit_hrs = {}
 
     # raw data
     own_heart_rate = None
@@ -234,17 +244,16 @@ def tcx_job(run_data):
         own_heart_rate = run_data["heart_rate"]  # bpm key-value
     if "points" in run_data:
         own_points = run_data["points"]  # track points
+
     # get single bpm
     if own_heart_rate is not None:
         for single_time, single_bpm in own_heart_rate.items():
             single_time = adjust_timestamp_to_utc(single_time, str(get_localzone()))
-            # set bpm data
-            fit_array = set_array(fit_array, single_time, single_bpm, None, None, None)
+            fit_hrs[single_time] = single_bpm
+
     # get single track point
     if own_points is not None:
         for point in own_points:
-            repeat_flag = False
-            # TODO add elevation information
             time_stamp = point.get("time_stamp")
             latitude = point.get("latitude")
             longitude = point.get("longitude")
@@ -257,24 +266,13 @@ def tcx_job(run_data):
             time_array = time.strptime(time_stamp, "%Y-%m-%dT%H:%M:%SZ")
             # to unix timestamp
             unix_time = int(time.mktime(time_array))
-            # set GPS data
-            # if the track point which has the same time has been added
-            if fit_array is None:
-                fit_array = set_array(
-                    fit_array, unix_time, None, latitude, longitude, elevation
-                )
-            else:
-                for i in fit_array:
-                    if i["time"] == unix_time:
-                        i["lati"] = latitude
-                        i["longi"] = longitude
-                        i["elevation"] = elevation
-                        repeat_flag = True  # unix_time repeated
-                        break
-                if not repeat_flag:
-                    fit_array = set_array(
-                        fit_array, unix_time, None, latitude, longitude, elevation
-                    )
+
+            # get heart rate at unix_time
+            hr = fit_hrs.get(unix_time, None)
+
+            fit_list.append((unix_time, hr, latitude, longitude, elevation))
+
+    fit_array = np.array(fit_list, dtype=FitType)
 
     if fit_array is not None:
         # order array
@@ -457,7 +455,7 @@ class Codoon:
         for p in points_dict_list:
             point = gpxpy.gpx.GPXTrackPoint(**p)
             gpx_segment.points.append(point)
-        return gpx.to_xml()
+        return gpx
 
     def get_single_run_record(self, route_id):
         print(f"Get single run for codoon id {route_id}")
@@ -477,7 +475,7 @@ class Codoon:
 
     @staticmethod
     def _gt(dt_str):
-        dt, _, us = dt_str.partition(".")
+        dt, _, _ = dt_str.partition(".")
         return datetime.strptime(dt, "%Y-%m-%dT%H:%M:%S")
 
     def parse_raw_data_to_namedtuple(
@@ -508,11 +506,14 @@ class Codoon:
                     p["latitude"] = latlng_data[i][0]
                     p["longitude"] = latlng_data[i][1]
 
-        if with_gpx:
-            # pass the track no points
-            if str(log_id) not in old_gpx_ids and run_points_data:
-                gpx_data = self.parse_points_to_gpx(run_points_data)
-                download_codoon_gpx(gpx_data, str(log_id))
+        elevation_gain = None
+        if run_points_data:
+            gpx_data = self.parse_points_to_gpx(run_points_data)
+            elevation_gain = gpx_data.get_uphill_downhill().uphill
+            if with_gpx:
+                # pass the track no points
+                if str(log_id) not in old_gpx_ids:
+                    download_codoon_gpx(gpx_data.to_xml(), str(log_id))
         heart_rate_dict = run_data.get("heart_rate")
         heart_rate = None
         if heart_rate_dict:
@@ -535,6 +536,7 @@ class Codoon:
             "id": log_id,
             "name": str(cast_type) + " from codoon",
             "type": cast_type,
+            "subtype": cast_type,
             "start_date": datetime.strftime(start_date, "%Y-%m-%d %H:%M:%S"),
             "end": datetime.strftime(end_date, "%Y-%m-%d %H:%M:%S"),
             "start_date_local": datetime.strftime(start_date, "%Y-%m-%d %H:%M:%S"),
@@ -549,6 +551,7 @@ class Codoon:
                 seconds=int((end_date.timestamp() - start_date.timestamp()))
             ),
             "average_speed": run_data["total_length"] / run_data["total_time"],
+            "elevation_gain": elevation_gain,
             "location_country": location_country,
             "source": "Codoon",
         }
