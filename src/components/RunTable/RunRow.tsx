@@ -24,7 +24,7 @@ const RunRow = ({
   runIndex,
   setRunIndex,
 }: IRunRowProperties) => {
-  const distance = (run.distance / 1000.0).toFixed(2);
+  const distance = Math.floor(run.distance / 10) / 100;
   const elevation_gain = run.elevation_gain?.toFixed(0);
   const paceParts = run.average_speed ? formatPace(run.average_speed) : null;
   const heartRate = run.average_heartrate;
