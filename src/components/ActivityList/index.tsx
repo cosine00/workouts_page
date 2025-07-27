@@ -91,7 +91,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
 
   const data: ChartData[] = generateLabels().map((day) => ({
     day,
-    distance: (dailyDistances[day - 1] || 0).toFixed(2), // Keep two decimal places
+    distance: (Math.trunc((dailyDistances[day - 1] || 0) * 100) / 100).toFixed(2), // Keep two decimal places
   }));
 
   const formatTime = (seconds: number): string => {
@@ -135,7 +135,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
       <div className={styles.activityDetails}>
         <p>
           <strong>{ACTIVITY_TOTAL.TOTAL_DISTANCE_TITLE}:</strong>{' '}
-          {summary.totalDistance.toFixed(2)} km
+          {(Math.trunc(summary.totalDistance * 100) / 100).toFixed(2)} km
         </p>        
         <p>
           <strong>{ACTIVITY_TOTAL.AVERAGE_SPEED_TITLE}:</strong>{' '}
@@ -155,7 +155,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
             </p>
             <p>
               <strong>{ACTIVITY_TOTAL.MAX_DISTANCE_TITLE}:</strong>{' '}
-              {summary.maxDistance.toFixed(2)} km
+              {(Math.trunc(summary.maxDistance * 100) / 100).toFixed(2)} km
             </p>
             <p>
               <strong>{ACTIVITY_TOTAL.MAX_SPEED_TITLE}:</strong>{' '}
