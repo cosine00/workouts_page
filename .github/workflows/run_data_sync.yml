@@ -22,6 +22,7 @@ on:
       - run_page/keep_to_strava_sync.py
       - run_page/oppo_sync.py
       - requirements.txt
+      - run_page/get_garmin_secret.py
 
 env:
   # please change to your own config.
@@ -256,5 +257,10 @@ jobs:
           echo "SAVE_DATA_IN_GITHUB_CACHE=$SAVE_DATA_IN_GITHUB_CACHE" >> "$GITHUB_OUTPUT"
           echo "DATA_CACHE_PREFIX=$DATA_CACHE_PREFIX" >> "$GITHUB_OUTPUT"
           echo "BUILD_GH_PAGES=$BUILD_GH_PAGES" >> "$GITHUB_OUTPUT"
+
+      - name: Generate Garmin Secret
+        run: |
+         python run_page/get_garmin_secret.py "${{ secrets.EMAIL }}" "${{ secrets.PASSWORD }}" > secret.txt
+         cat secret.txt   # 输出 Secret String
 
  
