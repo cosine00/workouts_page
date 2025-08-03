@@ -7598,5 +7598,21 @@
 "elevation_gain": 19.0,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 15325117038,
+"name": "\u6668\u95f4\u8dd1\u6b65",
+"distance": 6073.0,
+"moving_time": "0:36:44",
+"type": "Run",
+"start_date": "2025-08-02 23:53:20+00:00",
+"start_date_local": "2025-08-03 07:53:20",
+"location_country": "Natural, delicious & healthy, 2, \u5b9d\u5b89\u5357\u8def, \u7ea2\u6751\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "ivrhCeimwT^A\\QXKDEDS?SGMS{@A[KcAM]E[IUE?KICK^u@\\Yp@?VI\\Al@?`ADBAIA@FHQXL~@?HEXAd@G@DVJb@JXH\\FR@bAL|@BdCXz@DbALYBiA?yAI[GaAGMEo@Ia@IiBY]COEGIGD_@B{@Mc@@iAKe@@_@CSB]Gc@BSEKDcAe@Q?m@SWEKEsBcAkAu@aAe@KOGEW{@EK@EEMIEyBNkK~@mCLUDc@?[BmAA_CDmA?kESuBMUEm@Cm@IWG}BmAaAWCCAEHSl@eAFGB?VPTVz@l@JD?CEEa@QgA}@G?s@jAIJCB@BLFZBLFdAh@v@f@`@Jp@Hv@BzCVz@@zBPtACf@@rACz@@j@EjCKzGk@LEzAKJCdBKn@IH?NFHTAKIK_A@iBLaBPsBNkANw@Bg@FcBFc@FY?KAu@FqAAmCDeBIY@SE_CMSEoCOu@OqAu@yAo@j@Nl@X`B~@^FL?x@Fp@H\\ApBPdDPfB?d@CxB@n@GrEWvAOb@AJCv@E",
+"average_heartrate": 147.9,
+"average_speed": 2.755,
+"elevation_gain": 19.0,
+"source": "strava",
+"streak": 1
 }
 ]
