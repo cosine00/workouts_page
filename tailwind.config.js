@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       sans: [
+        'IBM Plex Mono',
         '-apple-system',
         'BlinkMacSystemFont',
         'Segoe UI',
