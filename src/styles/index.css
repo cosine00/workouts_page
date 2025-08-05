@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 body {
-  font-family: 'IBM Plex Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: 'IBM Plex Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !important;
   @apply font-sans;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
