@@ -1,17 +1,18 @@
 @import 'tailwindcss';
 
+body {
+  @apply font-sans;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 img::selection {
   background: transparent;
 }
 
 img::-moz-selection {
   background: transparent;
-}
-
-body {
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
 }
 
 iframe {
