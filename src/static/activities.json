@@ -7742,5 +7742,21 @@
 "elevation_gain": 62.6,
 "source": "strava",
 "streak": 5
+},
+{
+"run_id": 15419361012,
+"name": "Nike Run Club: \u661f\u671f\u4e00 \u665a\u95f4\u8dd1",
+"distance": 3038.9,
+"moving_time": "0:20:52",
+"type": "Run",
+"start_date": "2025-08-11 10:11:39+00:00",
+"start_date_local": "2025-08-11 18:11:39",
+"location_country": "7-Eleven, \u6df1\u5357\u4e2d\u8def, \u534e\u5f3a\u5317, \u534e\u822a\u793e\u533a, \u534e\u5f3a\u5317\u8857\u9053, \u798f\u7530\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "e_rhCwghwTBJAYFQ@[GWFQDSCe@DWASFk@ISAWDWESCU@WAUMKESSACYKOQIKSIQ?WZe@BWXQEUDc@Ry@Bm@AUDi@]]AWIg@HUDe@SEAWNY@UBUEQBUAWBe@DSIQEWBS\\e@GW@WIQCSIS@WAm@MS@UBSJMJi@DmADSGi@HUEyAES?aABSCU@SK{@@cAMOMKUEk@BQFQ?g@CQIQDk@CUDm@@g@EQBOLQ@g@Sc@HEXQGQ@_@CUGk@EgBF}@ImA@kCCi@@{@NMJGPCf@Qa@MQQEOMkAEg@DkB?SDe@?UC}@@i@DQGE@B_AbAMRBREx@HPDx@Cf@Hd@M~@Bp@Eh@Bz@RPCNGRApABR@LKPCh@Pf@Ih@Df@Ah@?TEf@Af@Gl@APCpABlAE",
+"average_heartrate": 138.3,
+"average_speed": 2.427,
+"elevation_gain": 14.0,
+"source": "strava",
+"streak": 6
 }
 ]
