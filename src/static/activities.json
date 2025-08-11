@@ -7726,5 +7726,21 @@
 "elevation_gain": 254.6,
 "source": "strava",
 "streak": 4
+},
+{
+"run_id": 15413539555,
+"name": "\ud83c\udfdd\ufe0f\u73e0\u6d77\u2022\u91ce\u72f8\u5c9bCycle&Walk",
+"distance": 8675.5,
+"moving_time": "1:23:15",
+"type": "Hike",
+"start_date": "2025-08-10 04:14:00+00:00",
+"start_date_local": "2025-08-10 12:14:00",
+"location_country": "Haiyu Road, \u9999\u6e7e\u8857\u9053, \u9999\u6d32\u533a, \u73e0\u6d77\u5e02, \u5e7f\u4e1c\u7701, 519000, \u4e2d\u56fd",
+"summary_polyline": "ev~fCyjgtTUQiBkAgCyB]UUKUG_@Ei@BMFEF@PLZDOMMAKDGHERAX@\\DXJl@\\fCpBt@b@z@d@A??@oBiAkC{Ba@UYMg@Ky@IILBh@EGCUB]BBqCEo@Ie@O[SW]Oa@E]Nl@N^PRXR\\L`@Hv@BtCDd@Fb@Jt@`@nB`BvBxATVR\\Tp@Ff@JtBFb@Jh@p@pBp@bBVf@T\\Z\\VRf@Xp@Xp@PVDPC?EKGg@CYGa@K]M_Am@_@a@[e@Yk@e@mAs@{BMy@OkCKo@Ue@c@i@uBuA{BiBo@]c@Mk@GaDKaAGSEWMk@c@EAVCBCC?WMGOGa@@e@F]r@cCNs@Hy@N}BNaA\\}@NYj@u@RQXQtBKt@Fl@Lh@Th@XzAvAVZT^t@fB`@j@x@`AnA~Bz@dA?BQTHQAAE?CBbAAXHXNl@f@pAfB`Ax@Z^RZRh@XvABh@BdDd@vEb@dCHv@BDT[BK?[Eg@a@iBs@cCI}@BsAN_CCg@Im@CECAOt@EBIM[aAUc@a@g@oAkAq@cAw@u@QKq@Sc@HB?A?@IOKFMhAd@n@^`@`@jA~AlAfA\\b@Rd@Nd@Jt@Fl@?bAGfAADQBJKJ_@B}@Aw@Ge@Ms@Mc@Wm@_@g@{@q@WWq@cAa@e@k@a@aBw@]USSS[y@yAyAcBUa@q@_BiAyAc@_@s@c@{@]i@KaAEs@@g@Lc@VeApAQ^M\\Mz@KxBMfAYrAq@vBAd@Jl@N\\FDDCIAKEO]MCe@LYBy@?MAKEGNAxAEXLmANMZE^Dn@Rj@Tv@d@nA^rAf@VATMNUL_@LKNAX@^H\\Ln@b@hB`B|@n@\\P\\LdATPLDRKbAA\\FfCJn@Rj@",
+"average_heartrate": 106.6,
+"average_speed": 1.737,
+"elevation_gain": 62.6,
+"source": "strava",
+"streak": 5
 }
 ]
