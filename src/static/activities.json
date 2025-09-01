@@ -7776,6 +7776,22 @@
 "streak": 1
 },
 {
+"run_id": 15656721824,
+"name": "\u722c\u697c\u68af",
+"distance": 0.0,
+"moving_time": "0:31:35",
+"type": "Stair",
+"start_date": "2025-08-20 10:45:41+00:00",
+"start_date_local": "2025-08-20 18:45:41",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 137.9,
+"average_speed": 0.0,
+"elevation_gain": 0.0,
+"source": "strava",
+"streak": 1
+},
+{
 "run_id": 15547657587,
 "name": "\ud83c\udf0a\u76d0\u5b98\u6f6e\u4e50\u4e4b\u57ce",
 "distance": 4328.0,
