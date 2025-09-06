@@ -6625,7 +6625,7 @@
 },
 {
 "run_id": 14173876782,
-"name": "\u722c\u697c\u68af",
+"name": "\u767b\u6708\u8ba1\u5212",
 "distance": 4000.0,
 "moving_time": "0:30:00",
 "type": "Stair",
@@ -6833,7 +6833,7 @@
 },
 {
 "run_id": 14404494567,
-"name": "\u722c\u697c\u68af",
+"name": "\u767b\u6708\u8ba1\u5212",
 "distance": 6666.7,
 "moving_time": "0:50:00",
 "type": "Stair",
@@ -7617,7 +7617,7 @@
 },
 {
 "run_id": 15340137545,
-"name": "\u722c\u697c\u68af",
+"name": "\u767b\u6708\u8ba1\u5212",
 "distance": 7722.2,
 "moving_time": "0:57:55",
 "type": "Stair",
@@ -7777,7 +7777,7 @@
 },
 {
 "run_id": 15656721824,
-"name": "\u722c\u697c\u68af",
+"name": "\u767b\u6708\u8ba1\u5212",
 "distance": 4211.1,
 "moving_time": "0:31:35",
 "type": "Stair",
@@ -7888,8 +7888,8 @@
 "streak": 1
 },
 {
-"run_id": 15711384079,
-"name": "\u767b\u6708\u8ba1\u5212 170\u5c42",
+"run_id": 15712710917,
+"name": "\u767b\u6708\u8ba1\u5212",
 "distance": 10220.0,
 "moving_time": "1:16:39",
 "type": "Stair",
@@ -7904,17 +7904,17 @@
 "streak": 2
 },
 {
-"run_id": 15712710917,
-"name": "\u767b\u6708\u8ba1\u5212",
-"distance": 10220.0,
-"moving_time": "1:16:39",
-"type": "Stair",
-"start_date": "2025-09-05 22:53:04+00:00",
-"start_date_local": "2025-09-06 06:53:04",
+"run_id": 15712972970,
+"name": "\u953b\u70bc\uff08\u4e0b\u5348\uff09",
+"distance": 315.0,
+"moving_time": "0:02:06",
+"type": "Jump",
+"start_date": "2025-09-06 07:28:24+00:00",
+"start_date_local": "2025-09-06 15:28:24",
 "location_country": null,
 "summary_polyline": "",
-"average_heartrate": 138.8,
-"average_speed": 2.2222222222222228,
+"average_heartrate": 97.4,
+"average_speed": 2.5000000000000004,
 "elevation_gain": 0.0,
 "source": "strava",
 "streak": 2
