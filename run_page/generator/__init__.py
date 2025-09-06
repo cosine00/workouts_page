@@ -171,6 +171,21 @@ class Generator:
                 activity.summary_polyline = filter_out(activity.summary_polyline)
             activity_list.append(activity.to_dict())
 
+        # 新增：补充 stair/jump 类型的距离
+        for act in activity_list:
+            t = act.get("type")
+            if t == "Stair" or t == "Jump":
+                mt = act.get("moving_time", "0:0:0")
+                try:
+                    h, m, s = [int(x) for x in mt.split(":")]
+                    total_hours = h + m / 60 + s / 3600
+                    if t == "Stair":
+                        act["distance"] = round(total_hours * 8 * 1000, 1)  # 1小时=8公里
+                    elif t == "Jump":
+                        act["distance"] = round(total_hours * 9 * 1000, 1)  # 1小时=9公里
+                except Exception:
+                    act["distance"] = 0
+
         return activity_list
 
     def loadForMapping(self):
@@ -201,6 +216,21 @@ class Generator:
             activity.streak = streak
             last_date = date
             activity_list.append(activity.to_dict())
+
+        # 新增：补充 stair/jump 类型的距离
+        for act in activity_list:
+            t = act.get("type")
+            if t == "Stair" or t == "Jump":
+                mt = act.get("moving_time", "0:0:0")
+                try:
+                    h, m, s = [int(x) for x in mt.split(":")]
+                    total_hours = h + m / 60 + s / 3600
+                    if t == "Stair":
+                        act["distance"] = round(total_hours * 8 * 1000, 1)
+                    elif t == "Jump":
+                        act["distance"] = round(total_hours * 9 * 1000, 1)
+                except Exception:
+                    act["distance"] = 0
 
         return activity_list
 
