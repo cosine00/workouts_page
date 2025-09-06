@@ -171,7 +171,7 @@ class Generator:
                 activity.summary_polyline = filter_out(activity.summary_polyline)
             activity_list.append(activity.to_dict())
 
-        # 新增：补充 stair/jump 类型的距离
+        # 自动补充 stair/jump 类型的距离和平均速度
         for act in activity_list:
             t = act.get("type")
             if t == "Stair" or t == "Jump":
@@ -183,9 +183,11 @@ class Generator:
                         act["distance"] = round(total_hours * 8 * 1000, 1)  # 1小时=8公里
                     elif t == "Jump":
                         act["distance"] = round(total_hours * 9 * 1000, 1)  # 1小时=9公里
+                    # 自动补充 average_speed（单位：米/秒）
+                    act["average_speed"] = act["distance"] / (total_hours * 3600) if total_hours > 0 else 0
                 except Exception:
                     act["distance"] = 0
-
+                    act["average_speed"] = 0
         return activity_list
 
     def loadForMapping(self):
@@ -217,7 +219,7 @@ class Generator:
             last_date = date
             activity_list.append(activity.to_dict())
 
-        # 新增：补充 stair/jump 类型的距离
+        # 自动补充 stair/jump 类型的距离和平均速度
         for act in activity_list:
             t = act.get("type")
             if t == "Stair" or t == "Jump":
@@ -229,9 +231,10 @@ class Generator:
                         act["distance"] = round(total_hours * 8 * 1000, 1)
                     elif t == "Jump":
                         act["distance"] = round(total_hours * 9 * 1000, 1)
+                    act["average_speed"] = act["distance"] / (total_hours * 3600) if total_hours > 0 else 0
                 except Exception:
                     act["distance"] = 0
-
+                    act["average_speed"] = 0
         return activity_list
 
     def get_old_tracks_ids(self):
