@@ -7998,5 +7998,21 @@
 "elevation_gain": 35.6,
 "source": "strava",
 "streak": 2
+},
+{
+"run_id": 15837287944,
+"name": "\u901a\u52e4\u9a91\u884c",
+"distance": 4146.1,
+"moving_time": "0:19:05",
+"type": "Ride",
+"start_date": "2025-09-17 00:00:05+00:00",
+"start_date_local": "2025-09-17 08:00:05",
+"location_country": "\u6842\u56ed\u8def, \u6842\u6728\u56ed\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "arshCuhmwTBrABNDDfAE^@jDZlANn@BHBFDR`AJp@FdB@vCHl@JZNXvAxAhAvA|AzBb@t@NNBTArD@PJ\\?f@DFFBR@rCGlGCjEBXBNFLHJVD`@?fBDdAJv@@\\?~@IzACfAB|DLrAKpA@jBLpC?j@IxADtDCr@ELMPKFSDoGH{@DBXBBPLVFzAJrBC~ABLBHHHJBLD`CBxKJd@Dh@?t@DtA?hBK|AHfIClCDdC?|BDpCC`AF|D",
+"average_heartrate": 115.5,
+"average_speed": 3.621,
+"elevation_gain": 32.2,
+"source": "strava",
+"streak": 3
 }
 ]
