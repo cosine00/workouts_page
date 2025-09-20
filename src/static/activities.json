@@ -8030,5 +8030,21 @@
 "elevation_gain": 48.4,
 "source": "strava",
 "streak": 4
+},
+{
+"run_id": 15875449388,
+"name": "\u767b\u6708\u8ba1\u5212",
+"distance": 5768.9,
+"moving_time": "0:43:16",
+"type": "Stair",
+"start_date": "2025-09-20 10:47:59+00:00",
+"start_date_local": "2025-09-20 18:47:59",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 142.5,
+"average_speed": 2.2222265023112477,
+"elevation_gain": 0.0,
+"source": "strava",
+"streak": 1
 }
 ]
