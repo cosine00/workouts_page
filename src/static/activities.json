@@ -8526,5 +8526,37 @@
 "elevation_gain": 59.0,
 "source": "strava",
 "streak": 2
+},
+{
+"run_id": 16557678051,
+"name": "\u722c\u697c\u68af",
+"distance": 6722.2,
+"moving_time": "0:50:25",
+"type": "Stair",
+"start_date": "2025-11-24 22:23:05+00:00",
+"start_date_local": "2025-11-25 06:23:05",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 138.2,
+"average_speed": 2.222214876033058,
+"elevation_gain": 0.0,
+"source": "strava",
+"streak": 1
+},
+{
+"run_id": 16557678215,
+"name": "\u901a\u52e4\u6b65\u884c",
+"distance": 3883.4,
+"moving_time": "0:40:50",
+"type": "Hike",
+"start_date": "2025-11-25 00:08:55+00:00",
+"start_date_local": "2025-11-25 08:08:55",
+"location_country": "\u5b9d\u5b89\u5357\u8def, \u7ea2\u6751\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "ihshCybmwTf@?\\Df@HLLH^Dd@BbFBXF^\\h@n@n@tA~AnBtCdApAFVB\\?jBBp@HfAHVND|@EbC?lAEhE?nCGXDPFPNJTNhDGnDH~BGd@?bCB~@LjADvA?~GC`BDfDATI\\yAxCFGNCX?RBLHHJBH@NFlFAdCDlAErAB`@Hf@Bh@C|F@nADh@C`DBnBA~APzDAb@Gr@DtCChCBjBBjDEZO`@",
+"average_heartrate": 119.1,
+"average_speed": 1.585,
+"elevation_gain": 45.2,
+"source": "strava",
+"streak": 1
 }
 ]
