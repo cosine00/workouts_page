@@ -8910,5 +8910,21 @@
 "elevation_gain": 69.0,
 "source": "strava",
 "streak": 2
+},
+{
+"run_id": 16920016334,
+"name": "\u4e0a\u6d77 City Walk",
+"distance": 8403.9,
+"moving_time": "2:01:58",
+"type": "Hike",
+"start_date": "2026-01-03 03:09:01+00:00",
+"start_date_local": "2026-01-03 11:09:01",
+"location_country": "3, \u897f\u85cf\u4e2d\u8def, \u6c5f\u9634\u793e\u533a, \u5357\u4eac\u4e1c\u8def\u8857\u9053, \u4e0a\u6d77\u5e02, \u9ec4\u6d66\u533a, \u4e0a\u6d77\u5e02, 200001, \u4e2d\u56fd",
+"summary_polyline": "scs}Du_ldVJO~@k@n@[^K^_@d@_@\\O`As@RERNFL@LGr@@\\MP?D@FhBlAbAhAVHQTCHNt@E\\uCjCWZCJ?T[n@CN?TJZ@FQVKHM@OGmA_Bs@iBU[Uk@cAqBWkAMc@MUBCH?@EQD_@l@yCjA_@Fs@Zu@^Y^g@L]RYVgAb@YTIXOHMAMIEc@KMM?y@XW@OCSO[?IIKk@Ec@Ks@EkA]oBMc@[Wl@WOOM[YsA@KFOJM?EK@GCW}@[a@IIIQ?]Di@?e@G[E_@Me@Gi@IcA?[BA@EGeAQu@CUDm@J@BAUQUHSeCAGECFCaAuA_@mAa@aAWs@M{@Og@s@eBa@sBGIK]Ii@Qy@Wi@QwAi@eCMw@]o@g@iBMoAIWCi@B]AQIWIk@IwALLH@H?BYAw@DMHE?M@C`@Kx@CFCYEMGSQGKI?YGIHK@w@Ao@EOGq@?QFE?i@Mo@UQ@QCk@UoAU_@Ow@SOI@@ACFBCBYGK?MBYLI?MGEECg@GSIIQCK@ODIFINCN@PJRFBAXUVGNSt@Kz@OXIFc@CqAYq@Iw@_@w@Aw@Q_@Cs@SIE]eAKc@OUUg@a@kA_@k@]]IQe@eC@u@IkAO{@k@iCMYUa@c@wAMk@m@oAc@yAUe@Ka@Q]]w@k@eBS_@e@uA[c@Ue@Oc@Mw@c@iAs@uAGc@Sw@uAkEQs@_@oAI[E_@Uy@QeAMYYcAMq@]iA",
+"average_heartrate": 98.3,
+"average_speed": 1.148,
+"elevation_gain": 203.6,
+"source": "strava",
+"streak": 3
 }
 ]
