@@ -8833,7 +8833,7 @@
 },
 {
 "run_id": 16803096343,
-"name": "\u6fb3\u95e8 City walk",
+"name": "\u6fb3\u95e8 City Walk",
 "distance": 11949.7,
 "moving_time": "1:49:12",
 "type": "Hike",
@@ -8860,22 +8860,6 @@
 "average_heartrate": 91.4,
 "average_speed": 2.492,
 "elevation_gain": 29.0,
-"source": "strava",
-"streak": 1
-},
-{
-"run_id": 16899573695,
-"name": "Nike Run Club: \u661f\u671f\u56db  \u4e0a\u5348\u8dd1",
-"distance": 1264.9,
-"moving_time": "0:09:19",
-"type": "Run",
-"start_date": "2026-01-01 02:08:40+00:00",
-"start_date_local": "2026-01-01 10:08:40",
-"location_country": "\u5f20\u6768\u8def, \u6d0b\u6cfe\u8857\u9053, \u6d0b\u6cfe, \u6d66\u4e1c\u65b0\u533a, \u4e0a\u6d77\u5e02, \u4e2d\u56fd\u5927\u9646, 200120, \u4e2d\u56fd",
-"summary_polyline": "uqs}DonwdV\\vAPdAJTPJPDzAi@t@]t@g@r@]LMPIb@YlDmB\\YPCLOpAw@JODWGUa@}@Qg@OKUk@sA{Bm@mAGUYc@_@}@Yc@GSMO{@aBm@i@QDSHOLa@T",
-"average_heartrate": 150.9,
-"average_speed": 2.263,
-"elevation_gain": 8.0,
 "source": "strava",
 "streak": 1
 },
