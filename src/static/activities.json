@@ -8958,5 +8958,21 @@
 "elevation_gain": 21.5,
 "source": "strava",
 "streak": 1
+},
+{
+"run_id": 17057827953,
+"name": "Nike Run Club: \u661f\u671f\u56db \u665a\u95f4\u8dd1",
+"distance": 7112.3,
+"moving_time": "0:44:40",
+"type": "Run",
+"start_date": "2026-01-15 11:49:00+00:00",
+"start_date_local": "2026-01-15 19:49:00",
+"location_country": "Natural, delicious & healthy, 2, \u5b9d\u5b89\u5357\u8def, \u7ea2\u6751\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "gwrhCuhmwTPGNMRER@RHPI^{@ZGJSEUISEUOIKQDSOQSIHY@YKk@GcA@SPEPCT@POnACbADITFTPFNKTCRMHWr@EX@BXVAz@Ll@@b@D|@Tf@BTCP@h@Fb@Xf@JRGrADe@Ki@@QCi@@SCy@MS?QKWCg@JS?QEOMg@GQIe@MSCQGSCi@@SEi@@h@Cs@L_BYQ@QFS@SE{@ES@g@CgAQPLe@s@K?ANQOMQAUk@GSGe@WUCQMUCQMa@OOOg@QOK[WIQOe@CUMMg@HoALcBJmCXuDZqDLQ?cBLqCAiCKy@?g@EQGUC{@E_DYQIaAk@a@Yy@[SCf@iAPMb@RdAt@RHQOQEq@c@[YSFm@fAJLRAPJh@L^\\`@Pd@\\d@LtBVTAf@?~ALvCLbC?|CGvBKR@TAf@IdBITEP?jD]~AIj@Kz@IRDJPJl@h@p@`@TNJd@JNLf@PR?TDl@f@^TfAd@j@n@Sc@XVPHTBTGj@ER?d@Ff@CRBRCh@BPFd@?d@PY@`Bo@?l@~@NpAJ|@BlATf@Df@Af@Lh@Bd@Hb@DESk@?cBUW?UEy@@OEUDQASG{@OU@e@Ii@Ci@Kg@COKOEZEoADSD{@Ig@?e@FSGk@CQDS?UCQDQJU`@^q@{@b@[g@?WYO?WQKGWWGSA_@Yi@Kq@a@QIe@Ma@SKOOIMOGSOODWQKg@?g@JoE\\y@L{@FUB}EZaBBQEUDg@DmAAk@BmA?cBIU@UEg@E{@@{@MyBKc@MeAs@wAw@PDvAv@d@R`@Vd@HvBN",
+"average_heartrate": 148.4,
+"average_speed": 2.654,
+"elevation_gain": 22.0,
+"source": "strava",
+"streak": 1
 }
 ]
