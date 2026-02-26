@@ -9136,6 +9136,22 @@
 "streak": 2
 },
 {
+"run_id": 17522531605,
+"name": "\u722c\u697c\u68af",
+"distance": 2162.2,
+"moving_time": "0:16:13",
+"type": "Stair",
+"start_date": "2026-02-24 12:02:40+00:00",
+"start_date_local": "2026-02-24 20:02:40",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 133.6,
+"average_speed": 2.2221993833504623,
+"elevation_gain": 0.0,
+"source": "strava",
+"streak": 3
+},
+{
 "run_id": 17516115228,
 "name": "Nike Run Club: \u661f\u671f\u4e09 \u665a\u95f4\u8dd1",
 "distance": 6127.0,
@@ -9149,6 +9165,6 @@
 "average_speed": 2.592,
 "elevation_gain": 31.0,
 "source": "strava",
-"streak": 1
+"streak": 4
 }
 ]
