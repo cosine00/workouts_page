@@ -9166,5 +9166,21 @@
 "elevation_gain": 31.0,
 "source": "strava",
 "streak": 4
+},
+{
+"run_id": 17528274084,
+"name": "Nike Run Club: \u661f\u671f\u56db \u665a\u95f4\u8dd1",
+"distance": 6129.8,
+"moving_time": "0:38:23",
+"type": "Run",
+"start_date": "2026-02-26 10:13:45+00:00",
+"start_date_local": "2026-02-26 18:13:45",
+"location_country": "\u4e2d\u822a\u8def, \u534e\u5f3a\u5317, \u534e\u822a\u793e\u533a, \u534e\u5f3a\u5317\u8857\u9053, \u798f\u7530\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "w~qhCoihwTAU?i@EcA@m@Qe@@o@HUFo@Ei@F_AAUBUEm@Bi@Ak@GQEo@BeA?eAAS@yABU@k@Ig@Ck@?UCSBU?_AEk@@aABY@iAGm@GSEk@BSCSH_AG{@DgAAS@i@EkB?yBCUMOQGe@@sAMSDg@CcB?QA_AFmAC}@JU?sAFqAAi@Ge@Ai@B}@EsCDQASJSESBSAc@GUAsAByDNuAAS@OJML?j@BaACU?i@PMT?REb@Cd@Ih@@|@If@BnACx@Mh@?RAf@Bf@?z@H~@Bz@CT?PH|@?h@HR@h@Mz@?hBObCFNEjAEPDPAh@Dh@C~@@l@Ib@SJO@U?cECk@BaAIoB@i@Ck@?eACUDyA?SGW@UCU@_AAWBeAC_A@k@Cm@@g@CYCaFBQIeAIQY[{@Gg@B}@Rg@Ny@?SGaAIe@Hw@\\YAkAWe@CSBc@\\SF]_@QI}@CS@e@Ri@l@a@VOF{@HS?QGSDQJODq@j@c@TMNQb@KPm@h@IPVz@LNPLJR?TEVQN{@Zc@\\[`@QHc@t@?VIh@JLx@VPATDNINJf@p@Pb@NJRAj@g@PGt@_@PGPMPGbAk@d@O^Yd@Wf@Ob@UNMPGh@ETAz@BTAPELQt@[LQZw@He@Bo@FUPMNIRAPMLSNMd@MRCT?jAURI^Uf@OFQ]{@]_@CSSKCSMIc@PS@",
+"average_heartrate": 158.3,
+"average_speed": 2.662,
+"elevation_gain": 30.0,
+"source": "strava",
+"streak": 5
 }
 ]
