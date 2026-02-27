@@ -1,4 +1,4 @@
-## 我的运动主页，使用 Apple Watch 记录数据同步到 Strava,Strava 再同步到本仓库并备份数据到佳明国际。
+我的运动主页，使用 Apple Watch 记录数据同步到 Strava,Strava 再同步到本仓库并备份数据到佳明国际。
 
 
 ![](https://img.hux.ink/image/2026/02/20260227151843562.webp)
