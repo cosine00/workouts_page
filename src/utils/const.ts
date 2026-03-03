@@ -176,11 +176,11 @@ const green = '#b7c7a3';
 const pink = 'rgb(90,230,26)';
 const orange = '#F57C00';
 const cyan = 'rgb(112,243,255)';
-const IKB = '#f6d76b';
+const IKB = 'rgb(241,241,245)';
 const wpink = '#A1E0F7';
 const gold = 'rgb(242,190,69)';
 const purple = 'rgb(154,118,252)';
-const veryPeri = '#48b670';//长春花蓝
+const veryPeri = 'rgb(255,192,247)';//长春花蓝
 const red = 'rgb(255,0,0)';//大红色
 
 // If your map has an offset please change this line
