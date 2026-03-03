@@ -173,7 +173,7 @@ export {
 const nike = 'rgb(224,237,94)';
 const yellow = 'rgb(224,237,94)';
 const green = '#b7c7a3';
-const pink = '#E91E63';
+const pink = 'rgb(90,230,26)';
 const orange = '#F57C00';
 const cyan = 'rgb(112,243,255)';
 const IKB = '#f6d76b';
@@ -197,7 +197,7 @@ export const ROAD_TRIP_COLOR = purple;
 export const FLIGHT_COLOR = gold;
 export const PROVINCE_FILL_COLOR = '#47b8e0';
 export const COUNTRY_FILL_COLOR = wpink;
-export const Stair_COLOR = purple;
+export const Stair_COLOR = cyan;
 export const SNOWBOARD_COLOR = wpink;
 export const Jump_COLOR = orange;
 export const WORKOUT_COLOR = wpink;
