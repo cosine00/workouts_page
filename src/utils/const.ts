@@ -170,7 +170,7 @@ export {
 };
 
 // eslint-disable-next-line no-unused-vars
-const nike = 'rgb(224,237,94)';
+const nike = '#f6d76b';
 const yellow = 'rgb(224,237,94)';
 const green = '#b7c7a3';
 const pink = 'rgb(90,230,26)';
@@ -186,8 +186,8 @@ const red = 'rgb(255,0,0)';//大红色
 // If your map has an offset please change this line
 // issues #92 and #198
 export const NEED_FIX_MAP = false;
-export const MAIN_COLOR = green;
-export const RUN_COLOR = IKB;
+export const MAIN_COLOR = IKB;
+export const RUN_COLOR = nike;
 export const RIDE_COLOR = veryPeri;
 export const VIRTUAL_RIDE_COLOR = veryPeri;
 export const HIKE_COLOR = pink;
