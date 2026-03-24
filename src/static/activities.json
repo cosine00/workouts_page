@@ -9630,5 +9630,37 @@
 "elevation_gain": 0.0,
 "source": "strava",
 "streak": 14
+},
+{
+"run_id": 17834032506,
+"name": "\u767b\u6708\u8ba1\u5212",
+"distance": 9275.6,
+"moving_time": "1:09:34",
+"type": "Stair",
+"start_date": "2026-03-23 22:00:44+00:00",
+"start_date_local": "2026-03-24 06:00:44",
+"location_country": null,
+"summary_polyline": "",
+"average_heartrate": 136.3,
+"average_speed": 2.222232870148539,
+"elevation_gain": 0.0,
+"source": "strava",
+"streak": 15
+},
+{
+"run_id": 17834790918,
+"name": "\u901a\u52e4\u6b65\u884c",
+"distance": 3336.5,
+"moving_time": "0:42:41",
+"type": "Hike",
+"start_date": "2026-03-24 00:01:00+00:00",
+"start_date_local": "2026-03-24 08:01:00",
+"location_country": "\u5b9d\u5b89\u5357\u8def, \u7ea2\u6751\u793e\u533a, \u6842\u56ed\u8857\u9053, \u7f57\u6e56\u533a, \u6df1\u5733\u5e02, \u5e7f\u4e1c\u7701, 518000, \u4e2d\u56fd",
+"summary_polyline": "utrhC{imwTl@URN\\p@n@xBb@~@Pl@d@z@X\\XzARp@\\^V^VRX^f@x@N`@RTZl@`@jAFb@?d@Q`ADd@@p@DJf@r@Jd@V|EAlBDfBC|@AdCDz@CfBDzBLdAEz@FdAAnDD`AEr@@vEC`@M^kAtBC?FAn@CN@LDHJDLFjAAt@D~@A~BDrB?fAEz@JfA@zABv@?zEIj@Af@BrCNnLDx@CdADr@EhDFv@?r@HhBCl@GNWXAP",
+"average_heartrate": 112.7,
+"average_speed": 1.303,
+"elevation_gain": 68.0,
+"source": "strava",
+"streak": 15
 }
 ]
