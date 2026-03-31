@@ -1,4 +1,4 @@
-﻿name: Run Data Sync
+name: Run Data Sync
 
 on:
   workflow_dispatch:
@@ -224,6 +224,7 @@ jobs:
         # if you want use the style:the start day of each year always aligns with Monday. please use the following script:
         # python run_page/gen_svg.py --from-db --title "${{ env.TITLE }}" --type github --github-style "align-monday" --athlete "${{ env.ATHLETE }}" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
         # python run_page/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Running" --type github --github-style "align-monday" --athlete "${{ env.ATHLETE }}" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5
+      
       - name: Make month of life
         if: env.GENERATE_MONTH_OF_LIFE == 'true'
         env:
@@ -246,6 +247,33 @@ jobs:
           git commit -m 'Add new workouts' || echo "nothing to commit"
           git push || echo "nothing to push"
 
+      # --- 新增的同步数据到 Hugo 博客仓库的步骤 ---
+      - name: Sync activities.json to Hugo Blog
+        if: env.SAVE_DATA_IN_GITHUB_CACHE != 'true'
+        env:
+          HUGO_REPO: 'cosine00/hug00'    # 你的 Hugo 仓库名称
+          TARGET_BRANCH: 'master'          # 你的 Hugo 仓库主分支名 (如果是 master 请修改为 master)
+        run: |
+          # 1. 克隆目标仓库到一个临时目录
+          git clone https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${HUGO_REPO}.git hugo_repo_temp
+          
+          # 2. 确保目标目录存在，并将 activities.json 复制过去
+          mkdir -p hugo_repo_temp/assets
+          cp src/static/activities.json hugo_repo_temp/assets/activities.json
+          
+          # 3. 提交并推送到目标仓库
+          cd hugo_repo_temp
+          git config user.name "${{ env.GITHUB_NAME }}"
+          git config user.email "${{ env.GITHUB_EMAIL }}"
+          git add assets/activities.json
+          git commit -m "Auto-sync activities.json from workouts_page" || echo "nothing to commit"
+          git push origin ${TARGET_BRANCH}
+          
+          # 4. 退出并清理临时目录
+          cd ..
+          rm -rf hugo_repo_temp
+      # --- 新增步骤结束 ---
+
       - name: Set Output
         id: set_output
         env:
@@ -256,6 +284,3 @@ jobs:
           echo "SAVE_DATA_IN_GITHUB_CACHE=$SAVE_DATA_IN_GITHUB_CACHE" >> "$GITHUB_OUTPUT"
           echo "DATA_CACHE_PREFIX=$DATA_CACHE_PREFIX" >> "$GITHUB_OUTPUT"
           echo "BUILD_GH_PAGES=$BUILD_GH_PAGES" >> "$GITHUB_OUTPUT"
-
-
- 
