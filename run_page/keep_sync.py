@@ -164,9 +164,39 @@ def parse_raw_data_to_nametuple(
     if not run_data["duration"]:
         print(f"ID {keep_id} has no total time just ignore please check")
         return
+
+    # === 🧭 自定义规则重命名开始 ===
+    sport_type_eng = KEEP2STRAVA[run_data['dataType']]  # 获取英文类型，如 Run, Ride, Walk, Hiking
+    custom_name = f"{sport_type_eng} from keep"        # 默认保底名字
+    
+    if sport_type_eng in ["Run", "VirtualRun"]:
+        # 🏃 跑步类型：根据 24 小时制的时间段智能判断
+        hour = start_date_local.hour
+        if 5 <= hour < 8:
+            custom_name = "晨间跑步"
+        elif 8 <= hour < 11:
+            custom_name = "上午跑步"
+        elif 11 <= hour < 14:
+            custom_name = "午间跑步"
+        elif 14 <= hour < 17:
+            custom_name = "下午跑步"
+        elif 17 <= hour < 19:
+            custom_name = "傍晚跑步"
+        elif 19 <= hour or hour < 5:
+            custom_name = "夜间跑步"
+            
+    elif sport_type_eng in ["Ride", "VirtualRide", "Cycling"]:
+        # 🚴 骑行类型
+        custom_name = "漫骑寻趣"
+        
+    elif sport_type_eng in ["Walk", "Hiking"]:
+        # 🥾 徒步/步行类型
+        custom_name = "追风逐野"
+    # === 🧭 自定义规则重命名结束 ===
+
     d = {
         "id": int(keep_id),
-        "name": f"{KEEP2STRAVA[run_data['dataType']]} from keep",
+        "name": custom_name,
         # future to support others workout now only for run
         "type": f"{KEEP2STRAVA[(run_data['dataType'])]}",
         "subtype": f"{KEEP2STRAVA[(run_data['dataType'])]}",
