@@ -8,6 +8,7 @@
   </metadata>
   <trk>
     <name>户外骑行</name>
+    <type>cycling</type>
     <trkseg>
       <trkpt lat="22.548911003395915" lon="114.10539521835744">
         <ele>0</ele>
