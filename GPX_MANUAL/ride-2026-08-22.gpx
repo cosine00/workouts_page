@@ -6,6 +6,10 @@
       <text>户外骑行</text>
     </link>
   </metadata>
+  <extensions>
+    <moving_time>6900</moving_time>
+    <average_speed>4.7308534141597285</average_speed>
+  </extensions>
   <trk>
     <name>户外骑行</name>
     <type>cycling</type>
