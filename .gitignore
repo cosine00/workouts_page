@@ -24,3 +24,7 @@ config.yaml
 
 route.png
 route.svg
+
+# 同步脚本自动备份
+run_page/data.db.bak-*
+.workbuddy/

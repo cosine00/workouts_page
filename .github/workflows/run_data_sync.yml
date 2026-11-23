@@ -15,6 +15,7 @@ on:
       - run_page/garmin_sync.py
       - run_page/coros_sync.py
       - run_page/keep_sync.py
+      - run_page/intervals_icu_sync.py
       - run_page/gpx_sync.py
       - run_page/tcx_sync.py
       - run_page/tcx_to_garmin_sync.py
@@ -25,7 +26,11 @@ on:
 
 env:
   # please change to your own config.
-  RUN_TYPE: keep # support strava/nike/garmin/garmin_cn/garmin_sync_cn_global/keep/only_gpx/only_fit/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn/codoon, Please change the 'pass' it to your own
+  RUN_TYPE: intervals_icu # support strava/nike/garmin/garmin_cn/garmin_sync_cn_global/keep/only_gpx/only_fit/intervals_icu/..., Please change the 'pass' it to your own
+  # Intervals.icu 同步参数（RUN_TYPE 为 intervals_icu 时生效）
+  INTERVALS_SYNC_START_DATE: '2026-01-01' # 只同步该日期之后的活动，避免与历史数据重复
+  INTERVALS_SYNC_TYPES: 'run,ride,hike' # 同步的运动类型族，可选 run/ride/hike/swim/row/ski
+  INTERVALS_GCJ02: 'false' # 数据来自华为等国内设备(GCJ-02)时设为 true，下载后自动纠偏为 WGS-84
   ATHLETE: Xin
   TITLE: Xin Workouts
   MIN_GRID_DISTANCE: 5 # change min distance here
@@ -106,6 +111,20 @@ jobs:
         if: env.RUN_TYPE == 'keep'
         run: |
           python run_page/keep_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} --with-gpx --sync-types running cycling hiking
+
+      - name: Run sync Intervals.icu script
+        if: env.RUN_TYPE == 'intervals_icu'
+        run: |
+          EXTRA_ARGS=""
+          if [ "$INTERVALS_GCJ02" = "true" ]; then
+            EXTRA_ARGS="--gcj02"
+          fi
+          python run_page/intervals_icu_sync.py \
+            ${{ secrets.INTERVALS_ICU_ATHLETE_ID }} \
+            ${{ secrets.INTERVALS_ICU_API_KEY }} \
+            --start-date "$INTERVALS_SYNC_START_DATE" \
+            --types "$INTERVALS_SYNC_TYPES" \
+            $EXTRA_ARGS
 
       - name: Run sync Coros script
         if: env.RUN_TYPE == 'coros'

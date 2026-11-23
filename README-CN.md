@@ -17,6 +17,7 @@
 ## 新增特性
 
 1. 支持多种运动类型，如骑行、徒步、游泳
+1. 支持 [Intervals.icu](#intervalsicu) 作为数据源
 1. 支持 APP 数据获取
    - **[咕咚](#codoon咕咚)** (因咕咚限制单个设备原因，无法自动化)
    - **[行者](#行者)**
@@ -35,6 +36,46 @@
 - 修改 `src/utils/util.js` 里的 `colorFromType`, 增加 case 指定颜色; `titleForRun` 增加 case 指定类型标题
 - 参考这个 [commit](https://github.com/ben-29/workouts_page/commit/f3a35884d626009d33e05adc76bbc8372498f317)
 - 或 [留言](https://github.com/ben-29/workouts_page/issues/20)
+
+---
+
+### Intervals.icu
+
+<details>
+<summary>用 Intervals.icu 作为同步源</summary>
+
+Intervals.icu 会保存各平台/设备上传的原始 FIT/GPX 文件，本项目通过其 REST API 拉取活动并写入本地数据库。
+
+1. 登录 Intervals.icu，进入 `Settings -> Developer Settings`，记下 **Athlete ID**（形如 `i123456`）并创建 **API Key**。
+2. 本地试跑（建议先用小范围日期验证）：
+
+```python
+python3(python) run_page/intervals_icu_sync.py ${athlete_id} ${api_key} --start-date 2026-11-01 --types run,ride,hike
+```
+
+参数说明：
+
+- `--start-date`：只同步该日期之后的活动，避免与已有历史数据重复
+- `--types`：运动类型族，逗号分隔，可选 `run` / `ride` / `hike` / `swim` / `row` / `ski`，默认 `run`
+- `--all`：同步全部运动类型（忽略 `--types`）
+- `--gcj02`：下载后把 GCJ-02 坐标纠偏为 WGS-84（数据来自华为等国内设备时需要）
+- `--dry-run`：只打印每条活动会被「新增 / 覆盖 / 跳过」，不下载、不写库
+- `--overwrite`：对已存在的同一条活动**原地覆写**（保留原 `run_id`，只更新该行），首次覆写前会自动备份 `data.db.bak-时间戳`
+- `--no-dedupe`：关闭与数据库已有活动的去重检查
+
+> 凭据也可以放在环境变量 `INTERVALS_ICU_ATHLETE_ID` / `INTERVALS_ICU_API_KEY` 里，命令行位置参数可省略。
+
+3. 切换到 GitHub Actions 自动同步：
+
+- 把 `.github/workflows/run_data_sync.yml` 里的 `RUN_TYPE` 改为 `intervals_icu`（已默认切换）
+- 在仓库 `Settings -> Secrets and variables -> Actions` 添加两个 Secret：
+  - `INTERVALS_ICU_ATHLETE_ID`
+  - `INTERVALS_ICU_API_KEY`
+- 如需调整同步范围，修改工作流顶部的 `INTERVALS_SYNC_START_DATE`、`INTERVALS_SYNC_TYPES`、`INTERVALS_GCJ02`
+
+> 注意：旧的 Keep / Strava 数据仍保留在 `run_page/data.db` 与 `GPX_OUT` 中，不会被删除；新数据以 `source = Intervals.icu` 写入，脚本会按「开始时间 + 距离」自动跳过已存在的活动。
+
+</details>
 
 ---
 
