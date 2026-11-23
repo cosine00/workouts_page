@@ -65,6 +65,16 @@ python3(python) run_page/intervals_icu_sync.py ${athlete_id} ${api_key} --start-
 
 > 凭据也可以放在环境变量 `INTERVALS_ICU_ATHLETE_ID` / `INTERVALS_ICU_API_KEY` 里，命令行位置参数可省略。
 
+**活动标题规则**：同步时按下面的优先级决定标题，修改标题后重新同步即可生效（只更新 `name` 字段，不动轨迹数据）：
+
+1. **Intervals.icu 上手动改过的标题** → 原样保留（例如「深圳湾-大沙河骑行」）
+2. **仍是系统默认名**（跑步 / 远足 / 骑行 / 徒步 / Run / Hike / Ride 等）→ 自动生成：
+   - 跑步按开始时间分档：`05:00-08:59` 晨间跑步、`09:00-11:59` 上午跑步、`12:00-16:59` 下午跑步、`17:00-20:59` 傍晚跑步、其余时间夜间跑步
+   - 徒步 → `徒步`，骑行 → `户外骑行`
+3. 其他运动类型（游泳、划船等）沿用 Intervals.icu 上的标题
+
+时段边界定义在 `run_page/intervals_icu_sync.py` 的 `TIME_SLOTS`，可直接调整。
+
 3. 切换到 GitHub Actions 自动同步：
 
 - 把 `.github/workflows/run_data_sync.yml` 里的 `RUN_TYPE` 改为 `intervals_icu`（已默认切换）

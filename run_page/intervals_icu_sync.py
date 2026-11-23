@@ -130,6 +130,71 @@ def parse_datetime(value):
         return None
 
 
+# --- 标题策略 ---------------------------------------------------------
+# Intervals.icu 上没手动改标题时，活动名就是运动类型的通用名（随界面语言变化）
+DEFAULT_TITLES = {
+    "run": {"run", "running", "跑步", "跑"},
+    "ride": {"ride", "cycling", "biking", "bike", "骑行", "骑车"},
+    "hike": {"hike", "hiking", "walk", "walking", "远足", "徒步", "步行", "散步"},
+}
+ALL_DEFAULT_TITLES = frozenset().union(*DEFAULT_TITLES.values())
+
+# 固定标题的类型族：徒步、骑行用统一名称
+FIXED_TITLES = {"hike": "徒步", "ride": "户外骑行"}
+
+# 时段划分（左闭右开，单位：小时），不落在任何区间内的算夜间
+TIME_SLOTS = (
+    (5, 9, "晨间"),
+    (9, 12, "上午"),
+    (12, 17, "下午"),
+    (17, 21, "傍晚"),
+)
+NIGHT_SLOT = "夜间"
+
+
+def normalize_title(name):
+    return str(name or "").strip().lower()
+
+
+def is_default_title(name, family):
+    """Intervals.icu 上的标题是否仍是系统默认名（即用户没手动改过）。"""
+    key = normalize_title(name)
+    if not key:
+        return True
+    if key in DEFAULT_TITLES.get(family, ()):
+        return True
+    return key in ALL_DEFAULT_TITLES
+
+
+def time_slot(value):
+    start_dt = parse_datetime(value)
+    if start_dt is None:
+        return NIGHT_SLOT
+    for begin, end, label in TIME_SLOTS:
+        if begin <= start_dt.hour < end:
+            return label
+    return NIGHT_SLOT
+
+
+def generated_title(activity):
+    """按运动类型与时段时间生成中文标题；未覆盖的类型返回 None。"""
+    family = family_of(activity.get("type"))
+    if family in FIXED_TITLES:
+        return FIXED_TITLES[family]
+    if family == "run":
+        return f"{time_slot(activity.get('start_date_local'))}跑步"
+    return None
+
+
+def resolve_title(activity):
+    """优先用 Intervals.icu 上手改过的标题，仍是默认名时按类型+时段生成。"""
+    name = str(activity.get("name") or "").strip()
+    family = family_of(activity.get("type"))
+    if name and not is_default_title(name, family):
+        return name
+    return generated_title(activity) or name
+
+
 def load_existing_activities(db_path):
     """从数据库读出已有活动索引：(开始时间, 距离, run_id, source, name)。"""
     if not os.path.exists(db_path):
@@ -396,6 +461,8 @@ def run():
     downloaded = 0
     synced = 0
     overwritten = 0
+    retitled = 0
+    title_updates = []
     skipped_duplicate = 0
     already_synced = 0
     skipped_failed = 0
@@ -417,8 +484,19 @@ def run():
             if matched:
                 if matched[3] == SOURCE_NAME:
                     if os.path.exists(output_path):
-                        # 已是本脚本同步过的记录且文件在本地，无需重复解析
-                        already_synced += 1
+                        # 已是本脚本同步过的记录且文件在本地：只检查标题是否变了
+                        desired_title = resolve_title(activity)
+                        current_title = matched[4] or ""
+                        if desired_title and desired_title != current_title:
+                            title_updates.append(
+                                (matched[2], current_title, desired_title)
+                            )
+                            print(
+                                f"标题更新 run_id={matched[2]} "
+                                f"{current_title or '(空)'} -> {desired_title}"
+                            )
+                        else:
+                            already_synced += 1
                         continue
                     # 本地文件丢了：重新下载并原地更新，不新增行
                     overwrite_run_id = matched[2]
@@ -456,7 +534,8 @@ def run():
                 correct_file_gcj02(output_path, file_type)
 
         loader = LOADERS.get(file_type, load_gpx_file)
-        title_dict = {numeric_id: activity["name"]} if activity.get("name") else {}
+        resolved_title = resolve_title(activity)
+        title_dict = {numeric_id: resolved_title} if resolved_title else {}
         try:
             track = loader(output_path, title_dict)
             track.source = SOURCE_NAME
@@ -499,11 +578,26 @@ def run():
     if options.dry_run:
         print(
             f"预览结束（未写入任何内容）：新增 {synced} 条，将覆盖 {overwritten} 条，"
+            f"将更新标题 {len(title_updates)} 条，"
             f"跳过重复 {skipped_duplicate} 条，已同步 {already_synced} 条"
         )
         return
 
-    if synced or overwritten:
+    if title_updates:
+        ensure_backup()
+        connection = sqlite3.connect(SQL_FILE)
+        try:
+            connection.executemany(
+                "update activities set name = ? where run_id = ?",
+                [(new_title, run_id) for run_id, _, new_title in title_updates],
+            )
+            connection.commit()
+        finally:
+            connection.close()
+        retitled = len(title_updates)
+        print(f"已更新 {retitled} 条活动的标题")
+
+    if synced or overwritten or retitled:
         activities_list = generator.load()
         with open(JSON_FILE, "w") as f:
             json.dump(activities_list, f, indent=0)
@@ -513,8 +607,8 @@ def run():
 
     print(
         f"完成：下载 {downloaded} 个文件，新增 {synced} 条，覆写 {overwritten} 条，"
-        f"跳过重复 {skipped_duplicate} 条，已同步 {already_synced} 条，"
-        f"失败 {skipped_failed} 条"
+        f"标题更新 {retitled} 条，跳过重复 {skipped_duplicate} 条，"
+        f"已同步 {already_synced} 条，失败 {skipped_failed} 条"
     )
 
 
